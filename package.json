@@ -1,0 +1,21 @@
+{
+  "name": "project-gulpjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vitaliy Stepanenko <vstepanenkodev1994@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-sass": "^4.1.0"
+  },
+  "dependencies": {}
+}

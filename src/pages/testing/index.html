@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-=edge">
+    <title>Diagnostics Testing</title>
+    <meta name="application-name" content="Diagnostics Testing"/>
+    <meta name="description" content="Diagnostics Testing">
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="../../assets/icons/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="../../assets/icons/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="../../assets/icons/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="../../assets/icons/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="../../assets/icons/mstile-310x310.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../../assets/icons/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../assets/icons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../assets/icons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../assets/icons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="../../assets/icons/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../../assets/icons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="../../assets/icons/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../assets/icons/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="../../assets/icons/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="../../assets/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="../../assets/icons/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../../assets/icons/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="../../assets/icons/favicon-128x128.png" sizes="128x128" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <section class="testing">
+        <div class="container">
+            <h2 class="testing__title">Онлайн-тест</h2>
+            <div class="tabs">
+                <div class="tabs__item active" data-group="bookkeeping">Бухгалтерский учет</div>
+                <div class="tabs__item" data-group="taxes">Налоговый учет</div>
+                <div class="tabs__item" data-group="management">Управленческий учет</div>
+                <div class="tabs__item" data-group="legal">Юридические вопросы</div>
+            </div>
+            <div class="step">
+                <p class="step__active">1</p>
+                <p class="step__full"> / 22</p>
+            </div>
+            <div class="test-wrapper">
+                <form id="form">
+                    <!-- Бухгалтерский учет -->
+                    <div class="test-item" data-group="bookkeeping">
+                        <p class="test-item__question">Кто собирает первичные бухгалтерские документы?</p>
+                        <div class="test-answer">
+                            <label class="checkmark">
+                                <input type="radio" value="Бухгалтерия" name="answer-01">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Бухгалтерия</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Я сам собираю" name="answer-01">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Я сам собираю</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Никто не собирает" name="answer-01">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Никто не собирает</p>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="test-item" data-group="bookkeeping">
+                        <p class="test-item__question">Как часто предоставляете в бухгалтерию первичные документы?</p>
+                        <div class="test-answer">
+                            <label class="checkmark">
+                                <input type="radio" value="Ежедневно" name="answer-02">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Ежедневно</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Один раз в месяц" name="answer-02">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Один раз в месяц</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Когда найду документы, тогда и передаю в бухгалтерию" name="answer-02">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Когда найду документы, тогда и передаю в бухгалтерию</p>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="test-item" data-group="bookkeeping">
+                        <p class="test-item__question">Как часто бывают банковские платежи со статусом «срочно»?</p>
+                        <div class="test-answer">
+                            <label class="checkmark">
+                                <input type="radio" value="Очень редко" name="answer-03">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Очень редко</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Один раз в неделю" name="answer-03">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Один раз в неделю</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Ежедневно / очень часто" name="answer-03">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Ежедневно / очень часто</p>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="test-item" data-group="bookkeeping">
+                        <p class="test-item__question">Есть ли оформленные локально-нормативные акты в компании – учетная политика, положение о премировании, положение о командировках и другие?</p>
+                        <div class="test-answer">
+                            <label class="checkmark">
+                                <input type="radio" value="Да" name="answer-04">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Да</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Частично" name="answer-04">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Частично</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Нет" name="answer-04">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Нет</p>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="test-item" data-group="bookkeeping">
+                        <p class="test-item__question">Как часто меняете бухгалтера?</p>
+                        <div class="test-answer">
+                            <label class="checkmark">
+                                <input type="radio" value="Давно не менял" name="answer-05">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Давно не менял</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Когда бухгалтер сам уходит" name="answer-05">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Когда бухгалтер сам уходит</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Очень часто" name="answer-05">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Очень часто</p>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="test-item" data-group="bookkeeping">
+                        <p class="test-item__question">Кто контролирует бухгалтера, или он предоставлен сам себе?</p>
+                        <div class="test-answer">
+                            <label class="checkmark">
+                                <input type="radio" value="Ежегодно проводятся аудиторские проверки" name="answer-06">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Ежегодно проводятся аудиторские проверки</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Сам контролирую или контролируют знакомые / члены семьи" name="answer-06">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Сам контролирую или контролируют знакомые / члены семьи</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Зачем его контролировать?" name="answer-06">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Зачем его контролировать?</p>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="test-item" data-group="bookkeeping">
+                        <p class="test-item__question">Как часто отвечаете на запросы банка по 115-ФЗ?</p>
+                        <div class="test-answer">
+                            <label class="checkmark">
+                                <input type="radio" value="Банк не задает таких вопросов" name="answer-07">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Банк не задает таких вопросов</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Очень редко" name="answer-07">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Очень редко</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Постоянно" name="answer-07">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Постоянно</p>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="test-item" data-group="bookkeeping">
+                        <p class="test-item__question">Как часто проверяете сохранность своих активов (проводите инвентаризацию)?</p>
+                        <div class="test-answer">
+                            <label class="checkmark">
+                                <input type="radio" value="Один раз в год" name="answer-08">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Один раз в год</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Сам не провожу, но бухгалтерия проводит" name="answer-08">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Сам не провожу, но бухгалтерия проводит</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Не знаю" name="answer-08">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Не знаю</p>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- Налоговый учет -->
+                    <div class="test-item" data-group="taxes">
+                        <p class="test-item__question">Когда была последняя выездная или камеральная налоговая проверка?</p>
+                        <div class="test-answer">
+                            <label class="checkmark">
+                                <input type="radio" value="В прошлом или в этом году" name="answer-09">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">В прошлом или в этом году</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Три года назад" name="answer-09">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Три года назад</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Не было ни разу" name="answer-09">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Не было ни разу</p>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="test-item" data-group="taxes">
+                        <p class="test-item__question">Проводите налоговое планирование?</p>
+                        <div class="test-answer">
+                            <label class="checkmark">
+                                <input type="radio" value="Да" name="answer-10">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Да</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Не знаю" name="answer-10">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Не знаю</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Нет" name="answer-10">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Нет</p>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="test-item" data-group="taxes">
+                        <p class="test-item__question">Сумму НДС рассчитываете и платите или покупаете ежеквартально в последний момент?</p>
+                        <div class="test-answer">
+                            <label class="checkmark">
+                                <input type="radio" value="Контролирую ежемесячно" name="answer-11">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Контролирую ежемесячно</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Как сложится" name="answer-11">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Как сложится</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Не контролирую" name="answer-11">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Не контролирую</p>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="test-item" data-group="taxes">
+                        <p class="test-item__question">Размер совокупной налоговой нагрузки</p>
+                        <div class="test-answer">
+                            <label class="checkmark">
+                                <input type="radio" value="Выше 5 %" name="answer-12">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Выше 5 %</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Меньше 5 %" name="answer-12">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Меньше 5 %</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Не знаю" name="answer-12">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Не знаю</p>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="test-item" data-group="taxes">
+                        <p class="test-item__question">Ваш размер выручки по льготным режимам НО (УСН, патент и др.) подходит к лимиту/порогу?</p>
+                        <div class="test-answer">
+                            <label class="checkmark">
+                                <input type="radio" value="Нет, мне далеко до лимита" name="answer-13">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Нет, мне далеко до лимита</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Да, подходит к порогу выручки" name="answer-13">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Да, подходит к порогу выручки</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Не знаю, не контролирую" name="answer-13">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Не знаю, не контролирую</p>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="test-item" data-group="taxes">
+                        <p class="test-item__question">Как часто приходят «письма счастья» из ФНС по недобросовестным поставщикам с запросом полного пакета документов по вашей деятельности?</p>
+                        <div class="test-answer">
+                            <label class="checkmark">
+                                <input type="radio" value="Очень редко" name="answer-14">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Очень редко</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Постоянно" name="answer-14">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Постоянно</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Не знаю, не контролирую" name="answer-14">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Не знаю, не контролирую</p>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- Управленческий учет -->
+                    <div class="test-item" data-group="management">
+                        <p class="test-item__question">Составлялся ли бизнес-план при запуске бизнеса?</p>
+                        <div class="test-answer">
+                            <label class="checkmark">
+                                <input type="radio" value="Заказал у сторонней организации" name="answer-15">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Заказал у сторонней организации</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Составил самостоятельно" name="answer-15">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Составил самостоятельно</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Не составлялся" name="answer-15">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Не составлялся</p>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="test-item" data-group="management">
+                        <p class="test-item__question">Знаете ли вы, какая текущая динамика роста выручки и прибыли в компании / ИП в месяц/квартал?</p>
+                        <div class="test-answer">
+                            <label class="checkmark">
+                                <input type="radio" value="Знаю точно" name="answer-16">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Знаю точно</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Примерно знаю" name="answer-16">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Примерно знаю</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Не знаю, не контролирую" name="answer-16">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Не знаю, не контролирую</p>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="test-item" data-group="management">
+                        <p class="test-item__question">Какая обстановка в коллективе, как организован рабочий процесс?</p>
+                        <div class="test-answer">
+                            <label class="checkmark">
+                                <input type="radio" value="Спокойно и прогнозируемоо" name="answer-17">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Спокойно и прогнозируемо</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Все в последний момент" name="answer-17">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Все в последний момент</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Результат не важен, главное – все работают" name="answer-17">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Результат не важен, главное – все работают</p>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="test-item" data-group="management">
+                        <p class="test-item__question">Есть ли планирование деятельности, ДДС на год и/или план и факт?</p>
+                        <div class="test-answer">
+                            <label class="checkmark">
+                                <input type="radio" value="Да, есть" name="answer-18">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Да, есть</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Не знаю, не контролирую" name="answer-18">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Не знаю, не контролирую</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Нет" name="answer-18">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Нет</p>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="test-item" data-group="management">
+                        <p class="test-item__question">Есть ли финансовый менеджер и платежный календарь?</p>
+                        <div class="test-answer">
+                            <label class="checkmark">
+                                <input type="radio" value="Да, есть" name="answer-19">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Да, есть</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Не знаю, не контролирую" name="answer-19">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Не знаю, не контролирую</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Нет" name="answer-19">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Нет</p>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- Юридические вопросы -->
+                    <div class="test-item" data-group="legal">
+                        <p class="test-item__question">
+                            Как долго у вас работают сотрудники – меньше года, больше года, есть текучка кадров?
+                        </p>
+                        <div class="test-answer">
+                            <label class="checkmark">
+                                <input type="radio" value="Больше года" name="answer-20">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Больше года</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Меньше года" name="answer-20">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Меньше года</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Большая текучка кадров" name="answer-20">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Большая текучка кадров</p>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="test-item" data-group="legal">
+                        <p class="test-item__question">
+                            Сотрудники состоят с вами в официальных договорных отношениях – трудовые, самозанятые, ИП?
+                        </p>
+                        <div class="test-answer">
+                            <label class="checkmark">
+                                <input type="radio" value="Да" name="answer-21">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Да</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="По-разному" name="answer-21">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">По-разному</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Нет" name="answer-21">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Нет</p>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="test-item" data-group="legal">
+                        <p class="test-item__question">
+                            Проверяете ли сотрудников при устройстве на работу?
+                        </p>
+                        <div class="test-answer">
+                            <label class="checkmark">
+                                <input type="radio" value="Да" name="answer-22">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Да</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Не знаю" name="answer-22">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Не знаю</p>
+                            </label>
+                            <label class="checkmark">
+                                <input type="radio" value="Нет" name="answer-22">
+                                <p class="checkmark-item"></p>
+                                <p class="checkmark-text">Нет</p>
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="test-navigation">
+                <button class="test-navigation__prev-button" onclick="sliderPrev()">Предыдущий вопрос</button>
+                <button class="test-navigation__next-button" onclick="sliderNext()" disabled>Следующий вопрос</button>
+                <button class="test-navigation__result-button" onclick="getTestingResult()" disabled>Получить результат</button>
+            </div>
+        </div>
+    </section>
+    <!-- <div class="container">
+        <div id="capture" style="padding: 10px; background: #f5da55">
+            <div class="div">
+                <h4 style="color: #000; ">Hello world!</h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam fugiat eius earum exercitationem repellat laboriosam minima, adipisci voluptatem explicabo sint nihil atque maxime a itaque, libero non ducimus facere iure quidem? Distinctio voluptatum soluta eligendi ipsa, necessitatibus fuga esse molestiae sint nemo aut ullam obcaecati sunt minus quis dignissimos unde nulla. Enim voluptate magni animi possimus delectus iure magnam nesciunt aperiam ullam ipsa deleniti id voluptates soluta, cupiditate exercitationem! Cumque provident voluptatum accusantium minima debitis quisquam. Non cum ducimus nam a dolores, culpa odit expedita ut corrupti porro error accusamus aperiam aliquid dolorum reiciendis quaerat facilis, eveniet accusantium alias laudantium!</p>
+                <hr>
+                <img src="./assets/icons/apple-touch-icon-144x144.png" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate voluptas debitis quisquam vel voluptatum saepe rem esse labore autem perferendis eum accusantium numquam odio modi praesentium suscipit eius facilis quam, mollitia alias. Animi eveniet itaque ea, velit necessitatibus consequuntur odit? Tempora in, commodi, neque consequatur nisi nostrum natus aut qui sunt esse repudiandae, fugit cupiditate repellat aperiam impedit ex quasi reprehenderit repellendus similique explicabo libero perspiciatis? Facere sunt laboriosam quae incidunt natus ipsa cum a dignissimos vel, veritatis non aut architecto commodi repudiandae quis, rem nesciunt atque tempore omnis ullam suscipit nisi laborum sed! Hic ab quos aliquam corporis ad molestiae modi dicta provident tenetur ipsa odio deleniti esse similique earum aut consequuntur at facere expedita, fuga, quisquam quae beatae repellendus. Ipsa quod aspernatur ab iure nemo, qui vel omnis sapiente accusantium perferendis voluptate distinctio. A obcaecati recusandae quisquam eligendi accusantium omnis fugiat itaque ipsum laudantium sint fuga saepe, alias necessitatibus ipsam. Recusandae ab incidunt quasi numquam aspernatur nemo asperiores, repudiandae voluptatem non alias? Sequi dolor doloribus eligendi magnam dolore provident. Deserunt non quo animi quaerat ducimus ut, consequuntur aperiam eum distinctio accusantium suscipit quidem, dignissimos a alias recusandae! Maiores placeat atque cumque sequi nemo. Quam laboriosam explicabo debitis veritatis autem! Quaerat reprehenderit iusto sequi nihil nam nisi natus? Natus consectetur ipsum quia omnis aliquid, pariatur esse illo! Ex molestias nulla dolorem rem odio? Laudantium placeat ex fugit. Recusandae neque natus explicabo in dolores, nihil eveniet quos consequuntur quae voluptatem quasi doloribus beatae fugiat optio ipsa. Facere consequatur sit quibusdam delectus corporis temporibus minima a quos similique sint sed, incidunt corrupti natus doloremque perferendis laborum? Quos dolores aperiam temporibus est aspernatur accusantium architecto rem vitae provident quaerat eaque quibusdam quod laborum, neque labore repudiandae molestiae explicabo sequi ullam. Error natus fugit nisi, iste amet deserunt harum aspernatur consequatur aperiam explicabo doloremque magnam labore maiores, dolores quo sint exercitationem deleniti facere consequuntur? Quibusdam eligendi culpa voluptatum accusantium praesentium nostrum nam minus placeat. Porro beatae assumenda tempore, neque id libero consectetur quasi eius modi repellat in nam magnam doloremque enim quae illum architecto veritatis iste culpa. Aperiam id quo harum quis assumenda blanditiis dicta quasi inventore eius, reiciendis eaque dolores error eos porro? Doloribus explicabo ut repudiandae quas culpa quisquam incidunt dolore magni, architecto numquam veniam adipisci expedita sequi vero sapiente voluptas reprehenderit ratione amet quasi dolores? Ab, nisi quam. Sint aspernatur cupiditate ad voluptates accusamus, voluptatibus debitis iste laborum ipsa repellendus aut perferendis nesciunt perspiciatis! Esse possimus eius at adipisci ipsum inventore voluptatum quisquam, nostrum laborum modi explicabo velit fugit tempora ad recusandae cumque id deleniti odio sit quibusdam natus! A dolores harum enim eaque! Dicta nostrum fugiat autem odit atque pariatur labore vitae minima placeat voluptas. Rerum fugit harum quas tempora impedit accusamus, unde, aperiam corrupti saepe est itaque similique nulla aut doloremque quaerat tempore. Ad minus totam eveniet nesciunt! Quae, quisquam. Numquam iure dolores architecto aliquid accusantium voluptas ipsam, iusto est excepturi laborum placeat, vero alias deleniti dignissimos, molestias enim ipsum animi cupiditate. Incidunt asperiores pariatur perspiciatis explicabo, fugit velit voluptates nulla fugiat quo possimus temporibus rerum distinctio porro cumque dignissimos sint! Distinctio, sunt! Iste soluta deserunt explicabo facere rerum, saepe pariatur, provident architecto maxime sed nobis incidunt quos minus, laudantium consectetur itaque aut eligendi temporibus ipsam debitis quia? Velit nesciunt dignissimos eveniet minima esse ad delectus cumque consectetur illum officia beatae dolores est nam iure pariatur atque accusantium similique iste natus, sapiente temporibus libero incidunt minus. Sed dolorem odit tenetur animi ullam dolor illum ratione in consequatur repudiandae optio inventore deserunt libero commodi neque, totam id iure provident! Officia nam tempora eum, est amet quo cum, consectetur minima, architecto suscipit tempore. Aliquam, corporis fugiat aut, aspernatur temporibus, accusamus perferendis vitae tenetur reiciendis enim molestias ab accusantium eligendi rem vel voluptas nobis doloremque nihil iste. Repellat earum totam, provident iusto sed eos nesciunt vitae nulla beatae incidunt sapiente pariatur. Ratione praesentium expedita accusantium nobis ut rem unde nulla quibusdam temporibus dolores facilis libero, dolorem odit quos quas nam quae ducimus facere reiciendis commodi modi debitis. Deserunt, natus maxime. Exercitationem pariatur eaque illo officia fugiat, repellat perferendis, reiciendis aut odit ratione culpa asperiores, sequi temporibus amet magni? Laudantium quas, quaerat, ut accusantium possimus reiciendis, sint deleniti quasi eligendi numquam rerum commodi vitae doloribus hic inventore aperiam nisi distinctio nam modi. Quod molestias ipsum nostrum dicta qui temporibus voluptatibus maiores quisquam vel! Pariatur, amet nesciunt provident beatae sed fugit dolore ab hic perspiciatis eum aspernatur vel illo odit! Nulla provident omnis consectetur debitis expedita ut quae aliquam, vel repellat suscipit illum ducimus, sapiente veritatis ipsam dolorum itaque ullam? Quod, quis ut accusantium suscipit libero illum sunt eos laudantium minus error deserunt officiis accusamus neque, facilis ab doloremque labore necessitatibus maxime non repellendus velit dicta. Fugit cupiditate ratione et eos beatae ex quae molestiae libero voluptates ipsa laborum reiciendis non alias, nulla necessitatibus nemo quasi omnis dignissimos ipsam minus aspernatur veritatis natus! Ullam iure, ad corrupti quaerat minus, veritatis fugiat nulla illo exercitationem cum voluptatem sint excepturi at eveniet et accusamus placeat praesentium eius neque fuga explicabo id saepe nam. Modi nesciunt fugiat ipsum eaque, facilis impedit temporibus alias dolor laboriosam non? Eum adipisci blanditiis impedit omnis placeat minus dignissimos. Numquam incidunt iusto natus dolorum, blanditiis quam nihil maiores delectus, molestias ducimus autem voluptates harum cum dolore sequi. Ad dolorem, sapiente ipsam quaerat eum quasi ducimus. Reprehenderit unde dolorem voluptatum, quae perspiciatis repellendus iusto ipsa voluptatem, a doloremque distinctio minus omnis ullam, enim nostrum mollitia molestias id! Libero minima esse amet quisquam quam autem quasi temporibus molestiae, voluptas quibusdam laudantium adipisci, est laboriosam porro, eveniet dolores! Illum ipsa ducimus aliquam deleniti quasi reiciendis accusantium, maxime qui quaerat consectetur architecto veniam nisi cumque explicabo illo enim a necessitatibus impedit iusto nobis praesentium exercitationem! Ratione ea pariatur hic blanditiis laboriosam laudantium atque earum, distinctio natus provident voluptate est quae incidunt error harum voluptatum aut, aspernatur eligendi. Necessitatibus asperiores officiis repudiandae iusto, illum suscipit aliquid soluta quaerat, rerum, fuga veniam? Placeat similique tenetur corporis, magnam ducimus eum iste fugit beatae enim, iure facilis possimus quaerat unde velit autem, magni odio a numquam molestias harum officiis nam officia consequuntur. Ipsa repellendus quisquam architecto, magnam suscipit facere consectetur neque dignissimos ducimus quae, officia ad nostrum expedita cupiditate, nisi iste culpa voluptates ipsum eum nulla nemo veritatis voluptatem. Laudantium hic debitis repudiandae eius optio cupiditate totam sunt voluptate iusto labore dolorum aut nostrum soluta odit, similique expedita. Ipsam quibusdam praesentium quo, ut corporis fugiat illo totam perspiciatis ex blanditiis, animi esse? Debitis aliquam illo ratione doloribus eveniet eum iste omnis quisquam obcaecati cupiditate! Suscipit rem eos cupiditate enim expedita veritatis natus, ipsum rerum, tempore iure beatae neque obcaecati nam omnis iusto laboriosam id alias error quibusdam culpa officia! Itaque placeat alias non, nulla fugiat harum, nisi sit incidunt dolor ratione quasi ab deserunt saepe consectetur maiores
+                <img src="./assets/icons/apple-touch-icon-144x144.png" alt=""> 
+                voluptatibus aspernatur vitae sequi aliquam libero expedita quia voluptates! Tempora expedita adipisci error totam, beatae provident sed recusandae nisi molestiae quos? Minima omnis neque porro, doloremque culpa laboriosam repellendus distinctio voluptatum ex est enim. Modi similique quisquam nesciunt illo laudantium recusandae odio, voluptatem quam est et, excepturi velit ipsum doloremque, earum quia. Quod, corporis? Eum dolorem iusto asperiores excepturi, ea rem eius quisquam labore consectetur officia dignissimos maiores vitae animi minima, quibusdam dicta, cupiditate voluptates ab eos magnam quo totam architecto! Ipsum dicta aliquid cupiditate, et aperiam ex minus accusantium obcaecati magnam sequi id rem unde dolore ducimus explicabo. Neque, quibusdam voluptate quam natus perspiciatis repellat laboriosam debitis beatae cum sunt cupiditate! Dolorem perferendis eaque doloribus aliquam placeat ullam quaerat magni ab cupiditate animi iusto facere tempora, autem natus! Velit nihil itaque nisi ab et nulla impedit? Et temporibus corrupti exercitationem porro ratione nobis, qui aliquam facilis inventore, ut debitis magni optio saepe corporis voluptates tenetur, illo modi? Aut accusamus necessitatibus beatae voluptatem id culpa a eligendi unde perferendis, pariatur esse fuga eveniet, ipsa veniam quam quo iste veritatis! Magni labore dolore neque fugiat, temporibus laborum et magnam culpa tempora, sint minima rerum odit asperiores fugit aspernatur quibusdam dignissimos ullam iure omnis eligendi. Assumenda aliquid sit expedita tempore quasi nesciunt repudiandae. Aliquam in consectetur vero dolorum pariatur, quis quia aut ipsam quos!</p>
+            </div>
+        </div>
+       <button onclick="resultTestDownload()">generate PDF</button>
+    </div> -->
+    <!-- Scripts -->
+    <script defer src="../../libs/jquery/jquery-3.5.1.min.js"></script>
+    <script src="../../libs/html2canvas.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
