@@ -30,9 +30,18 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+    <header class="header">
+        <a href="./" class="logo">
+            <img src="../assets/images/logo.svg" alt="TOPLINE" class="logo__image">
+        </a>
+        <h1 class="header-label">
+            <span class="bold">Открытый онлайн-тест владельца бизнеса</span>
+            от Натальи Ненашевой и команды экспертов «ТОП ЛАЙН»
+        </h1>
+    </header>
     <section class="testing">
         <div class="container">
-            <h2 class="testing__title">Онлайн-тест</h2>
+            <h2 class="title">Онлайн-тест</h2>
             <div class="tabs">
                 <div class="tabs__item active" data-group="bookkeeping">Бухгалтерский учет</div>
                 <div class="tabs__item" data-group="taxes">Налоговый учет</div>
@@ -46,7 +55,7 @@
             <div class="test-wrapper">
                 <form id="form">
                     <!-- Бухгалтерский учет -->
-                    <!-- <div class="test-item" data-group="bookkeeping">
+                    <div class="test-item" data-group="bookkeeping">
                         <p class="test-item__question">Кто собирает первичные бухгалтерские документы?</p>
                         <div class="test-answer">
                             <label class="checkmark">
@@ -205,9 +214,9 @@
                                 <p class="checkmark-text">Не знаю</p>
                             </label>
                         </div>
-                    </div> -->
+                    </div>
                     <!-- Налоговый учет -->
-                    <!-- <div class="test-item" data-group="taxes">
+                    <div class="test-item" data-group="taxes">
                         <p class="test-item__question">Когда была последняя выездная или камеральная налоговая проверка?</p>
                         <div class="test-answer">
                             <label class="checkmark">
@@ -326,9 +335,9 @@
                                 <p class="checkmark-text">Не знаю, не контролирую</p>
                             </label>
                         </div>
-                    </div> -->
+                    </div>
                     <!-- Управленческий учет -->
-                    <!-- <div class="test-item" data-group="management">
+                    <div class="test-item" data-group="management">
                         <p class="test-item__question">Составлялся ли бизнес-план при запуске бизнеса?</p>
                         <div class="test-answer">
                             <label class="checkmark">
@@ -427,7 +436,7 @@
                                 <p class="checkmark-text">Нет</p>
                             </label>
                         </div>
-                    </div> -->
+                    </div>
                     <!-- Юридические вопросы -->
                     <div class="test-item" data-group="legal">
                         <p class="test-item__question">
@@ -498,9 +507,15 @@
                 </form>
             </div>
             <div class="test-navigation">
-                <button class="test-navigation__prev-button" onclick="sliderPrev()">Предыдущий вопрос</button>
-                <button class="test-navigation__next-button" onclick="sliderNext()" disabled>Следующий вопрос</button>
-                <button class="test-navigation__result-button" onclick="getTestingResult()" disabled>Получить результат</button>
+                <button class="button-link button_prev" onclick="sliderPrev()">
+                    <span class="button-link__label">Предыдущий вопрос</span>
+                </button>
+                <button class="button button_next" onclick="sliderNext()" disabled>
+                    <span class="button__label">Следующий вопрос</span>
+                </button>
+                <button class="button button_result" onclick="getTestingResult()" disabled>
+                    <span class="button__label">Получить результат</span>
+                </button>
             </div>
         </div>
     </section>

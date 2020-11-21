@@ -12,10 +12,9 @@ let keysResult;
 const sliderItem = document.querySelectorAll('.test-item');
 const sliderTabs = document.querySelectorAll('.tabs .tabs__item');
 const inputsRadio = document.querySelectorAll('input[type="radio"]');
-const sliderPrevButton =  document.querySelector('.test-navigation__prev-button');
-const sliderNextButton =  document.querySelector('.test-navigation__next-button');
-const testResultButton = document.querySelector('.test-navigation__result-button');
-
+const sliderPrevButton =  document.querySelector('.button-link.button_prev');
+const sliderNextButton =  document.querySelector('.button.button_next');
+const testResultButton = document.querySelector('.button.button_result');
 // GET KEYS JSON FILE 
 d3.json("../../keys.json")
     .then(data => {
@@ -46,11 +45,6 @@ function updateTestData(groupName, value, key, keyColor) {
 }
 
 // SLIDER TEST NAVIGATION
-sliderPrevButton.style = `
-        opacity: 0;
-        pointer-events: none;
-    `;
-
 function sliderPrev() {
     if (sliderIndex !== 0) {
         sliderIndex--;

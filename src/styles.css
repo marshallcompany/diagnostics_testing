@@ -496,9 +496,17 @@ body {
 
 @media screen and (max-width: 568px) {
   .title {
-    font-size: 1.75rem; }
+    font-size: 30px; }
   .button__label {
-    font-size: .8rem; }
+    font-size: 14px; }
+  .header {
+    margin-bottom: 0; }
+  .description-item__title,
+  .description-item__start {
+    font-size: 16px;
+    margin-bottom: 20px; }
+  .description-item__text {
+    font-size: 14px; }
   .description-image,
   .information-image {
     width: 100%; }
@@ -509,4 +517,10 @@ body {
     flex-direction: column; }
     .description-item .button-wrapper .button {
       margin-right: 0;
-      margin-bottom: 25px; } }
+      margin-bottom: 25px; }
+  .information-item__title {
+    font-size: 18px;
+    margin-bottom: 20px; }
+  .information-item__text {
+    font-size: 16px;
+    margin-bottom: 15px; } }

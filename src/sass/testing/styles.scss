@@ -1,13 +1,86 @@
-@import '../../theme/variables';
-@import '../../theme/mixin';
-@import '../../theme/normalize';
+@import '../theme/variables';
+@import '../theme/mixin';
+@import '../theme/normalize';
+
+@font-face {
+    font-family: "Inter Regular";
+    src: url("../assets/fonts/Inter/Inter-Regular.ttf");
+	src: url("../assets/fonts/Inter/Inter-Regular.ttf")format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Inter Light";
+    src: url("../assets/fonts/Inter/Inter-Light.ttf");
+	src: url("../assets/fonts/Inter/Inter-Light.ttf")format("truetype");
+    font-style: normal;
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Inter Bold";
+    src: url("../assets/fonts/Inter/Inter-Bold.ttf");
+	src: url("../assets/fonts/Inter/Inter-Bold.ttf")format("truetype");
+    font-style: normal;
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Inter ExtraBold";
+    src: url("../assets/fonts/Inter/Inter-Bold.ttf");
+	src: url("../assets/fonts/Inter/Inter-BOld.ttf")format("truetype");
+    font-style: normal;
+    font-weight: 800;
+}
 
 body {
-    color: #000000;
-    background-color: #ffffff;
-    font-family: Arial, sans-serif;
+    color: #1E1E1E;
+    background-color:#ffffff;
+    font-family: $interRegular, Arial, sans-serif;
     font-size: 18px;
+    padding-bottom: 15px;
 }
+
+.title {
+    font-family: $interExtraBold;
+    font-size: 55px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 60px;
+}
+.bold {
+    font-family: $interBold;
+}
+
+.button {
+    max-width: 350px;
+    width: 100%;
+    height: 65px;
+    background: linear-gradient(90deg, #4E2D5E 0%, #8A2C5B 100%);
+    box-shadow: 0px 20px 30px rgba(138, 44, 91, 0.15);
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    padding: 0;
+}
+.button__label {
+    font-family: $interBold;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.button-link {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid $purple;
+    padding: 0;
+    padding-bottom: 10px;
+}
+.button-link__label {
+    color: $purple;
+    font-family: $interExtraBold;
+    font-size: 15px;
+}
+
 // CUSTOM RADIO BUTTON
 .checkmark {
     display: flex;
@@ -18,16 +91,19 @@ body {
 }
 
 .checkmark-item {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     border: 1px solid $purple;
     position: relative;
     border-radius: 5px;
     &:before {
         content: '';
-        width: 50%;
-        height: 50%;
-        background-color: $purple;
+        width: 20px;
+        height: 15px;
+        background-image: url("../assets/images/testing/check.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50%;
         position: absolute;
         left: 50%;
         top: 50%;
@@ -49,34 +125,46 @@ input[type="radio"]:checked ~ .checkmark-item {
         display: block;
     }
 }
-// TESTING
-.testing__title {
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+/* HEADER */
+.header {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 55px;
 }
+.logo{
+    flex-shrink: 0;
+}
+.header-label {
+    font-size: 16px;
+    font-family: $interLight;
+    font-weight: normal;
+}
+// TESTING
 .tabs {
     display: flex;
     justify-content: center;
-    border-bottom: 3px solid #f4f4f4;
-    margin-bottom: 50px;
+    border-bottom: 2px solid #E1E1E1;
+    margin-bottom: 95px;
     &__item{
         padding: 10px;
         text-align: center;
         text-transform: uppercase;
-        transform: translateY(3px);
+        transform: translateY(2px);
         position: relative;
         padding-bottom: 15px;
         margin-right: 50px;
         min-width: 200px;
+        font-family: $interLight;
         &:last-child{
             margin-right: 0;
         }
         &:before {
             content: '';
             width: 100%;
-            height: 3px;
-            background-color: $purple;
+            height: 2px;
+            background-color: $purpleLight;
             position: absolute;
             left: 0;
             bottom: 0;
@@ -84,7 +172,7 @@ input[type="radio"]:checked ~ .checkmark-item {
             transition: opacity .25s linear;
         }
         &.active {
-            color: $purple;
+            color: $purpleLight;
             &:before {
                 opacity: 1;
             }
@@ -95,25 +183,25 @@ input[type="radio"]:checked ~ .checkmark-item {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 .step__active {
     color: $purple;
-    font-size: 50px;
-    font-weight: bold;
+    font-size: 40px;
+    font-family: $interExtraBold;
     line-height: 1;
 }
 .step__full {
-    color: #000000;
-    font-size: 18px;
+    font-size: 15px;
+    font-family: $interLight;
     transform: translateY(2px);
 }
 // TEST
 .test-item__question{
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 25px;
+    font-family: $interExtraBold;
     text-align: center;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
 }
 .test-answer{
     display: flex;
@@ -122,9 +210,12 @@ input[type="radio"]:checked ~ .checkmark-item {
     .checkmark {
         flex-direction: column;
         align-items: center;
+        max-width: 300px;
+        width: 100%;
     }
     .checkmark-text {
         text-align: center;
+        font-size: 15px;
         margin-top: 20px;
     }
 }
@@ -135,33 +226,20 @@ input[type="radio"]:checked ~ .checkmark-item {
     align-items: center;
 }
 
-.test-navigation__prev-button {
-    background-color: transparent;
-    border: none;
-    color: $purple;
-    font-weight: bold;
-    border-bottom: 3px solid $purple;
-    outline: none;
-    padding: 0;
-    padding-bottom: 5px;
-    font-size: 16px;
+.button_prev {
+    opacity: 0;
+    pointer-events: none;
 }
-.test-navigation__next-button,
-.test-navigation__result-button {
-    width: 350px;
-    padding: 25px 0;
-    background: linear-gradient(90deg, #512D5E, $purple);
-    border: none;
-    color: #ffffff;
-    font-weight: bold;
-    border-radius: 5px;
-    outline: none;
+
+.button_prev,
+.button_next,
+.button_result {
     transition: opacity .25s linear;
     &:disabled {
         opacity: .5;
     }
 }
-.test-navigation__result-button {
+.button_result {
     display: none;
 }
 
@@ -169,4 +247,5 @@ input[type="radio"]:checked ~ .checkmark-item {
 	overflow: -moz-hidden-unscrollable;
 	overflow: hidden;
 }
-@import '../../theme/grid';
+@import '../theme/grid';
+@import './media'
