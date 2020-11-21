@@ -37,9 +37,12 @@ body {
     font-family: $interRegular, Arial, sans-serif;
     font-size: 18px;
 }
+
 * {
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
+
 .bold {
     font-family: $interBold;
 }

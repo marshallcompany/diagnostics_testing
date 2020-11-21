@@ -39,6 +39,11 @@ body {
     padding-bottom: 15px;
 }
 
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
 .title {
     font-family: $interExtraBold;
     font-size: 55px;
@@ -148,15 +153,17 @@ input[type="radio"]:checked ~ .checkmark-item {
     border-bottom: 2px solid #E1E1E1;
     margin-bottom: 95px;
     &__item{
-        padding: 10px;
         text-align: center;
         text-transform: uppercase;
         transform: translateY(2px);
         position: relative;
         padding-bottom: 15px;
-        margin-right: 50px;
-        min-width: 200px;
+        font-size: 15px;
         font-family: $interLight;
+        margin-right: 50px;
+        br {
+            display: none;
+        }
         &:last-child{
             margin-right: 0;
         }
