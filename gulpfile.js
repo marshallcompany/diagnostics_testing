@@ -1,4 +1,4 @@
-const { src, dest, parallel, series, watch } = require('gulp');
+const { src, dest, series, watch } = require('gulp');
 const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
@@ -7,11 +7,7 @@ const imagesmin = require('gulp-imagemin');
 const del = require('del');
 const paths = [
     {
-        src: './src/sass/pages/**/*.scss',
-        dest: './src/pages'
-    },
-    {
-        src: './src/sass/*.scss',
+        src: './src/sass/**/*.scss',
         dest: './src'
     }
 ];
@@ -27,7 +23,7 @@ const initBrowserSync = () => {
         port: 8000,
         online: true
     });
-    watch('./src/**/*.scss').on('change', parallel(styles, browserSync.reload));
+    watch('./src/**/*.scss').on('change', series(styles, browserSync.reload));
     watch('./src/**/*.html').on('change', browserSync.reload);
     watch('./src/**/*.js').on('change', browserSync.reload);
     watch('./src/**/*.php').on('change', browserSync.reload);
@@ -68,6 +64,7 @@ const copyFile = () => {
         './src/libs/**/*.css',
         './src/libs/**/*.map',
         './src/**/*.html',
+        './src/**/*.json',
         './src/**/*.css',
         './src/**/*.js',
         './src/**/*.+(otf|ttf|woff|woff2|eot)',

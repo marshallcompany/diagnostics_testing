@@ -8,6 +8,7 @@ let testData = {
 };
 
 let sliderIndex = 0;
+let keysResult;
 const sliderItem = document.querySelectorAll('.test-item');
 const sliderTabs = document.querySelectorAll('.tabs .tabs__item');
 const inputsRadio = document.querySelectorAll('input[type="radio"]');
@@ -15,22 +16,32 @@ const sliderPrevButton =  document.querySelector('.test-navigation__prev-button'
 const sliderNextButton =  document.querySelector('.test-navigation__next-button');
 const testResultButton = document.querySelector('.test-navigation__result-button');
 
+// GET KEYS JSON FILE 
+d3.json("../../keys.json")
+    .then(data => {
+        keysResult = data;
+    });
+//
 
 inputsRadio.forEach(input => {
-    input.addEventListener('change', (element) => {
-        const groupName = element.target.parentNode.parentNode.parentNode.dataset['group'];;
-        const inputValue = element.target.value;
+    input.addEventListener('change', function() {
+        const groupName = this.parentNode.parentNode.parentNode.dataset['group'];
+        const inputValue = this.value;
+        const key = this.getAttribute('key');
+        const keyColor = this.getAttribute('keyColor');
         sliderIndex === (sliderItem.length - 1) ? testResultButton.removeAttribute('disabled') : 
         sliderNextButton.removeAttribute('disabled');
-        updateTestData(groupName, inputValue);
+        updateTestData(groupName, inputValue, key, keyColor);
     });
 });
 
-function updateTestData(groupName, value) {
+function updateTestData(groupName, value, key, keyColor) {
     const sliderItem = document.querySelectorAll('.test-item .test-item__question');
     testData[groupName].push({
         question: sliderItem[sliderIndex].innerHTML.trim(),
-        answer: value
+        answer: value,
+        key: key,
+        keyColor: keyColor
     });
 }
 
@@ -111,7 +122,7 @@ function getTestingResult() {
 
 // GENERATION - DOWNLOAD TEST RESULPR
 function resultTestDownload() {
-    const data = document.body.querySelector('#capture');
+    const data = document.body.querySelector(ELEMENT);
     document.querySelector('body').classList.add('hide-scrollbar');
     html2canvas(data, {
         scrollX: 0,

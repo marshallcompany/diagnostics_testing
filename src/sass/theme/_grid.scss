@@ -1,5 +1,6 @@
 /* GRID STYLE */
 .container {
+	box-sizing: border-box;
 	padding-left: 15px;
 	padding-right: 15px;
 	margin:0 auto;
@@ -26,14 +27,14 @@
 		padding-right: 10px;
 	}
 }
-@media screen and (min-width: 992px) and (max-width: 1199px) {
+@media screen and (min-width: 992px) and (max-width: 1279px) {
 	.container{
 		max-width: 992px;
 	}
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
 	.container{
-		max-width: 1200px;
+		max-width: 1280px;
 		padding-left: 0;
 		padding-right: 0;
 	}

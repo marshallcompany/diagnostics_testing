@@ -65,7 +65,8 @@ sup {
   top: -0.5em; }
 
 img {
-  border-style: none; }
+  border-style: none;
+  max-width: 100%; }
 
 button,
 input,
@@ -177,14 +178,14 @@ body {
 .checkmark-item {
   width: 45px;
   height: 45px;
-  border: 1px solid #8A2C5B;
+  border: 1px solid #722D5C;
   position: relative;
   border-radius: 5px; }
   .checkmark-item:before {
     content: '';
     width: 50%;
     height: 50%;
-    background-color: #8A2C5B;
+    background-color: #722D5C;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -235,7 +236,7 @@ input[type="radio"]:checked ~ .checkmark-item:before {
       content: '';
       width: 100%;
       height: 3px;
-      background-color: #8A2C5B;
+      background-color: #722D5C;
       position: absolute;
       left: 0;
       bottom: 0;
@@ -244,7 +245,7 @@ input[type="radio"]:checked ~ .checkmark-item:before {
       -o-transition: opacity .25s linear;
       transition: opacity .25s linear; }
     .tabs__item.active {
-      color: #8A2C5B; }
+      color: #722D5C; }
       .tabs__item.active:before {
         opacity: 1; }
 
@@ -261,7 +262,7 @@ input[type="radio"]:checked ~ .checkmark-item:before {
   margin-bottom: 50px; }
 
 .step__active {
-  color: #8A2C5B;
+  color: #722D5C;
   font-size: 50px;
   font-weight: bold;
   line-height: 1; }
@@ -312,9 +313,9 @@ input[type="radio"]:checked ~ .checkmark-item:before {
 .test-navigation__prev-button {
   background-color: transparent;
   border: none;
-  color: #8A2C5B;
+  color: #722D5C;
   font-weight: bold;
-  border-bottom: 3px solid #8A2C5B;
+  border-bottom: 3px solid #722D5C;
   outline: none;
   padding: 0;
   padding-bottom: 5px;
@@ -324,9 +325,9 @@ input[type="radio"]:checked ~ .checkmark-item:before {
 .test-navigation__result-button {
   width: 350px;
   padding: 25px 0;
-  background: -webkit-gradient(linear, left top, right top, from(#512D5E), to(#8A2C5B));
-  background: -o-linear-gradient(left, #512D5E, #8A2C5B);
-  background: linear-gradient(90deg, #512D5E, #8A2C5B);
+  background: -webkit-gradient(linear, left top, right top, from(#512D5E), to(#722D5C));
+  background: -o-linear-gradient(left, #512D5E, #722D5C);
+  background: linear-gradient(90deg, #512D5E, #722D5C);
   border: none;
   color: #ffffff;
   font-weight: bold;
@@ -348,6 +349,8 @@ input[type="radio"]:checked ~ .checkmark-item:before {
 
 /* GRID STYLE */
 .container {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -371,12 +374,12 @@ input[type="radio"]:checked ~ .checkmark-item:before {
     padding-left: 10px;
     padding-right: 10px; } }
 
-@media screen and (min-width: 992px) and (max-width: 1199px) {
+@media screen and (min-width: 992px) and (max-width: 1279px) {
   .container {
     max-width: 992px; } }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .container {
-    max-width: 1200px;
+    max-width: 1280px;
     padding-left: 0;
     padding-right: 0; } }
