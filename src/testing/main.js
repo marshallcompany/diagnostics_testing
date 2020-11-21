@@ -24,24 +24,62 @@ d3.json("../../keys.json")
 
 inputsRadio.forEach(input => {
     input.addEventListener('change', function() {
-        const groupName = this.parentNode.parentNode.parentNode.dataset['group'];
-        const inputValue = this.value;
-        const key = this.getAttribute('key');
-        const keyColor = this.getAttribute('keyColor');
         sliderIndex === (sliderItem.length - 1) ? testResultButton.removeAttribute('disabled') : 
         sliderNextButton.removeAttribute('disabled');
-        updateTestData(groupName, inputValue, key, keyColor);
+        updateTestData.call(this);
     });
 });
 
-function updateTestData(groupName, value, key, keyColor) {
+function updateTestData() {
     const sliderItem = document.querySelectorAll('.test-item .test-item__question');
-    testData[groupName].push({
+    const groupName = this.parentNode.parentNode.parentNode.dataset['group'];
+    testData[groupName][sliderIndex] = {
         question: sliderItem[sliderIndex].innerHTML.trim(),
-        answer: value,
-        key: key,
-        keyColor: keyColor
+        answer: this.value,
+        key: this.getAttribute('key'),
+        keyColor: this.getAttribute('keyColor')
+    };
+}
+
+function clearTestData() {
+    for (let key in testData) {
+        testData[key] = testData[key].filter(e => e !== null);
+    };
+}
+
+function filterKeyColor(key, keyColor) {
+    return testData[key].filter(item => item.keyColor === keyColor);
+}
+const testDataFilter = {};
+
+function getTestingResult() {
+    clearTestData();
+    for (let key in testData) {
+        testData[key].forEach(_ => {
+            testDataFilter[key] = {
+                green: filterKeyColor(key, 'green'),
+                yellow: filterKeyColor(key, 'yellow'),
+                red: filterKeyColor(key, 'red'),
+            }
+        })
+    };
+    checkValidationColor();
+}
+
+
+function checkValidationColor() {
+    Object.keys(testDataFilter).forEach(key => {
+        const maxLength = Math.max(...Object.values(testDataFilter[key]).map(item => item.length));
+        const baseColor = Object.entries(testDataFilter[key]).filter(([color, item]) => item.length === maxLength);
+        testDataFilter[key].baseValidation = baseColor.length === 3 ? 'yellow' : baseColor[0][0];
     });
+    console.log(testDataFilter);
+}
+
+class ResultTabs {
+    constructor(category) {
+        this.category = category;
+    }
 }
 
 // SLIDER TEST NAVIGATION
@@ -108,10 +146,6 @@ function checkStates(nameStates) {
             `;
             break;
     };
-}
-
-function getTestingResult() {
-    console.log('[ TESTING RESULT ]', testData);
 }
 
 // GENERATION - DOWNLOAD TEST RESULPR
