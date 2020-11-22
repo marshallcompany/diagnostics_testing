@@ -6,20 +6,18 @@ let testData = {
     management: new Array(),
     legal: new Array()
 };
-
 let sliderIndex = 0;
-let keysResult;
 const sliderItem = document.querySelectorAll('.test-item');
 const sliderTabs = document.querySelectorAll('.tabs .tabs__item');
 const inputsRadio = document.querySelectorAll('input[type="radio"]');
 const sliderPrevButton =  document.querySelector('.button-link.button_prev');
 const sliderNextButton =  document.querySelector('.button.button_next');
 const testResultButton = document.querySelector('.button.button_result');
-// GET KEYS JSON FILE 
-d3.json("../../keys.json")
-    .then(data => {
-        keysResult = data;
-    });
+
+// RESET FORM
+setTimeout(() => {
+    document.querySelector('#form').reset();
+}, 0);
 //
 
 inputsRadio.forEach(input => {
@@ -71,16 +69,33 @@ function checkValidationColor() {
     Object.keys(testDataFilter).forEach(key => {
         const maxLength = Math.max(...Object.values(testDataFilter[key]).map(item => item.length));
         const baseColor = Object.entries(testDataFilter[key]).filter(([color, item]) => item.length === maxLength);
-        testDataFilter[key].baseValidation = baseColor.length === 3 ? 'yellow' : baseColor[0][0];
+        if (baseColor.length === 3 && baseColor[0][1].length ===  baseColor[1][1].length && 
+            baseColor[1][1].length ===  baseColor[2][1].length) {
+                testDataFilter[key].baseValidation = 'yellow';
+        } else if (baseColor.length === 2 && (baseColor[0][0] === 'green' && baseColor[1][0] === 'yellow') && 
+        baseColor[0][1].length ===  baseColor[1][1].length) {
+            testDataFilter[key].baseValidation = 'yellow';
+        } else if (baseColor.length === 2 && (baseColor[0][0] === 'green' && baseColor[1][0] === 'red') && 
+        baseColor[0][1].length ===  baseColor[1][1].length) {
+            testDataFilter[key].baseValidation = 'red';
+        } else if (baseColor.length === 2 && (baseColor[0][0] === 'yellow' && baseColor[1][0] === 'red') && 
+        baseColor[0][1].length ===  baseColor[1][1].length) {
+            testDataFilter[key].baseValidation = 'red';
+        } else if (baseColor.length === 3 && baseColor[0][1].length ===  baseColor[1][1].length) {
+            testDataFilter[key].baseValidation = 'yellow';
+        } else if (baseColor.length === 3 && baseColor[0][1].length ===  baseColor[2][1].length) {
+            testDataFilter[key].baseValidation = 'red';
+        } else if (baseColor.length === 3 && baseColor[1][1].length ===  baseColor[2][1].length) {
+            testDataFilter[key].baseValidation = 'red';
+        } else {
+            testDataFilter[key].baseValidation = baseColor[0][0];
+        }
     });
-    console.log(testDataFilter);
+    window.sessionStorage.setItem('DATA', JSON.stringify(testDataFilter));
+    window.location.href = './result/index.html';
 }
 
-class ResultTabs {
-    constructor(category) {
-        this.category = category;
-    }
-}
+
 
 // SLIDER TEST NAVIGATION
 function sliderPrev() {
@@ -146,36 +161,4 @@ function checkStates(nameStates) {
             `;
             break;
     };
-}
-
-// GENERATION - DOWNLOAD TEST RESULPR
-function resultTestDownload() {
-    const data = document.body.querySelector(ELEMENT);
-    document.querySelector('body').classList.add('hide-scrollbar');
-    html2canvas(data, {
-        scrollX: 0,
-        scrollY: -window.scrollY,
-        width:  data.clientWidth , 
-        height: data.clientHeight,
-    })
-    .then(canvas => {
-        document.querySelector('body').classList.remove('hide-scrollbar');
-        saveAs(canvas.toDataURL(), 'diagnostics-test.png');
-    }) 
-    .catch(error => {
-        console.log('[ GENERATION - DOWNLOAD TEST RESULT ERROR ]', error);
-    })
-}
-
-function saveAs(url, filename) {
-    let link = document.createElement('a');
-    if (typeof link.download === 'string') {
-        link.href = url;
-        link.download = filename;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    } else {
-        window.open(url);
-    }
 }

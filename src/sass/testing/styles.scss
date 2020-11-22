@@ -250,9 +250,5 @@ input[type="radio"]:checked ~ .checkmark-item {
     display: none;
 }
 
-.hide-scrollbar {
-	overflow: -moz-hidden-unscrollable;
-	overflow: hidden;
-}
 @import '../theme/grid';
 @import './media'

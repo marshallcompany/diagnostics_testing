@@ -430,10 +430,6 @@ input[type="radio"]:checked ~ .checkmark-item:before {
 .button_result {
   display: none; }
 
-.hide-scrollbar {
-  overflow: -moz-hidden-unscrollable;
-  overflow: hidden; }
-
 /* GRID STYLE */
 .container {
   -webkit-box-sizing: border-box;
