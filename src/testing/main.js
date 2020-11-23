@@ -64,7 +64,6 @@ function getTestingResult() {
     checkValidationColor();
 }
 
-
 function checkValidationColor() {
     Object.keys(testDataFilter).forEach(key => {
         const maxLength = Math.max(...Object.values(testDataFilter[key]).map(item => item.length));

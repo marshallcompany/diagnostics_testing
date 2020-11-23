@@ -2,7 +2,6 @@
 
 let dataJSON;
 const testData = JSON.parse(window.sessionStorage.getItem('DATA'));
-console.log(testData);
 // GET KEYS JSON FILE 
 d3.json("../../data.json")
     .then(data => {
@@ -10,6 +9,7 @@ d3.json("../../data.json")
     })
     .then(() => {
         createResultTabs();
+        recommendation();
     });
 //
 
@@ -33,11 +33,86 @@ class ResultTabs {
     }
 }
 
+class RecommendationItem {
+    constructor(key, color, parentElement, lastElement){
+        this.key = key;
+        this.color = color;
+        this.parentElement = parentElement;
+        this.lastElement = lastElement;
+    }
+    render() {
+        const el = document.createElement('div');
+        el.classList.add('recommendation-item', `${this.color}`);
+        if (this.lastElement) {
+            el.classList.add('last');
+        }
+        el.innerHTML = `
+            <div class="recommendation-status">
+                <img src="${dataJSON[this.color].icon}" class="recommendation-status__icon">
+            </div>
+            <div class="recommendation-information">
+                <h3 class="recommendation-information__title">Рекомендация</h3>
+                    <p class="recommendation-information__text">
+                        ${dataJSON[this.key]}
+                    </p>
+            </div>`;
+        this.parentElement.prepend(el);
+    }
+}
+
+function recommendation() {
+    let answersArray = [];
+    for (let key in testData) {
+        const color = testData[key].baseValidation;
+        answersArray = answersArray.concat(testData[key][color]);
+    }
+    const removeDuplicate = answersArray.filter((item, index, array) => { 
+        return index === array.findIndex((t) => {
+            return t.key === item.key
+        });
+    });
+    const recommendationKey = {
+        green: removeDuplicate.filter(item => item.keyColor === 'green').map(obj => obj.key),
+        yellow: removeDuplicate.filter(item => item.keyColor === 'yellow').map(obj => obj.key),
+        red: removeDuplicate.filter(item => item.keyColor === 'red').map(obj => obj.key)
+    };
+    createRecommendationItem(recommendationKey);
+}
+
+function createRecommendationItem(keys) {
+    const parentElement = document.querySelector('.recommendation');
+    parentElement.innerHTML = '';
+    let lastElement = false;
+    for (let keyColor in keys) {
+        keys[keyColor].forEach( (key, index) => {
+            if (index === 0) {
+                if (keyColor === 'red' && (keys.yellow.length || keys.green.length)) {
+                    lastElement = true;
+                } else if (keyColor === 'yellow' && keys.green.length) {
+                    lastElement = true;
+                }
+            } else {
+                lastElement = false;
+            }
+            new RecommendationItem(
+                key, 
+                keyColor, 
+                parentElement,
+                lastElement
+            ).render();
+        });
+    }
+}
+
 function createResultTabs() {
     const parentElement = document.querySelector('.cards');
     parentElement.innerHTML = '';
     for (let key in testData) {
-        new ResultTabs(dataJSON[key], testData[key].baseValidation, parentElement).render()
+        new ResultTabs(
+            dataJSON[key], 
+            testData[key].baseValidation,
+            parentElement
+        ).render()
     }
 }
 

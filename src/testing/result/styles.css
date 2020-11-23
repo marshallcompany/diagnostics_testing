@@ -284,6 +284,9 @@ body {
   font-family: "Inter Light";
   font-weight: normal; }
 
+.result {
+  padding-bottom: 45px; }
+
 .subtitle {
   text-align: center;
   font-size: 33px;
@@ -305,11 +308,12 @@ body {
   -ms-flex-pack: justify;
   justify-content: space-between;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin-bottom: 60px; }
 
 .cards-item {
   width: 24%;
-  background-color: #f4f4f4;
+  background-color: #F8F7F9;
   border-radius: 30px;
   padding: 40px 5px 40px 5px;
   display: -webkit-box;
@@ -355,6 +359,81 @@ body {
 
 .cards-item__description {
   text-align: center;
+  font-family: "Inter Light";
+  line-height: 1.5; }
+
+.recommendation {
+  background-color: #F8F7F9;
+  border-radius: 30px;
+  padding: 49px 30px; }
+
+.recommendation-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 30px; }
+
+.recommendation-item.last {
+  padding-bottom: 49px;
+  margin-bottom: 49px;
+  position: relative; }
+  .recommendation-item.last:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background-image: url("../../assets/images/testing/result/line.png");
+    background-repeat: no-repeat;
+    background-size: cover; }
+
+.recommendation-item.yellow .recommendation-status {
+  background-color: #F3D11E; }
+
+.recommendation-item.yellow .recommendation-information__title {
+  color: #F3D11E; }
+
+.recommendation-item.green .recommendation-status {
+  background-color: #46DD95; }
+
+.recommendation-item.green .recommendation-information__title {
+  color: #46DD95; }
+
+.recommendation-status {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background-color: #DE3943;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-right: 20px; }
+
+.recommendation-status__icon {
+  height: 30px; }
+
+.recommendation-information {
+  padding-top: 15px; }
+
+.recommendation-information__title {
+  color: #DE3943;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-family: "Inter Bold";
+  margin: 0;
+  margin-bottom: 15px; }
+
+.recommendation-information {
+  font-size: 15px;
   font-family: "Inter Light";
   line-height: 1.5; }
 
