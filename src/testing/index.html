@@ -30,501 +30,505 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <header class="header">
-        <a href="./" class="logo">
-            <img src="../assets/images/logo.svg" alt="TOPLINE" class="logo__image">
-        </a>
-        <h1 class="header-label">
-            <span class="bold">Открытый онлайн-тест владельца бизнеса</span>
-            от Натальи Ненашевой и команды экспертов «ТОП ЛАЙН»
-        </h1>
-    </header>
-    <section class="testing">
-        <div class="container">
-            <h2 class="title">Онлайн-тест</h2>
-            <div class="tabs">
-                <div class="tabs__item active" data-group="bookkeeping">Бухгалтерский <br> учет</div>
-                <div class="tabs__item" data-group="taxes">Налоговый <br> учет</div>
-                <div class="tabs__item" data-group="management">Управленческий <br> учет</div>
-                <div class="tabs__item" data-group="legal">Юридические <br> вопросы</div>
+    <div class="circle-1"></div>
+    <div class="circle-2"></div>
+    <div class="main">
+        <header class="header">
+            <a href="./" class="logo">
+                <img src="../assets/images/logo.svg" alt="TOPLINE" class="logo__image">
+            </a>
+            <h1 class="header-label">
+                <span class="bold">Открытый онлайн-тест владельца бизнеса</span>
+                от Натальи Ненашевой и команды экспертов «ТОП ЛАЙН»
+            </h1>
+        </header>
+        <section class="testing">
+            <div class="container">
+                <h2 class="title">Онлайн-тест</h2>
+                <div class="tabs">
+                    <div class="tabs__item active" data-group="bookkeeping">Бухгалтерский <br> учет</div>
+                    <div class="tabs__item" data-group="taxes">Налоговый <br> учет</div>
+                    <div class="tabs__item" data-group="management">Управленческий <br> учет</div>
+                    <div class="tabs__item" data-group="legal">Юридические <br> вопросы</div>
+                </div>
+                <div class="step">
+                    <p class="step__active">1</p>
+                    <p class="step__full"> / 22</p>
+                </div>
+                <div class="test-wrapper">
+                    <form id="form">
+                        <!-- Бухгалтерский учет -->
+                        <div class="test-item" data-group="bookkeeping">
+                            <p class="test-item__question">Кто собирает первичные бухгалтерские документы?</p>
+                            <div class="test-answer">
+                                <label class="checkmark">
+                                    <input type="radio" value="Бухгалтерия" name="answer-01" key="1" keyColor="green">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Бухгалтерия</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Я сам собираю" name="answer-01" key="2" keyColor="yellow">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Я сам собираю</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Никто не собирает" name="answer-01" key="3" keyColor="red">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Никто не собирает</p>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="test-item" data-group="bookkeeping">
+                            <p class="test-item__question">Как часто предоставляете в бухгалтерию первичные документы?</p>
+                            <div class="test-answer">
+                                <label class="checkmark">
+                                    <input type="radio" value="Ежедневно" name="answer-02" key="1" keyColor="green">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Ежедневно</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Один раз в месяц" name="answer-02" key="2" keyColor="yellow">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Один раз в месяц</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Когда найду документы, тогда и передаю в бухгалтерию" name="answer-02" key="3" keyColor="red">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Когда найду документы, тогда и передаю в бухгалтерию</p>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="test-item" data-group="bookkeeping">
+                            <p class="test-item__question">Как часто бывают банковские платежи со статусом «срочно»?</p>
+                            <div class="test-answer">
+                                <label class="checkmark">
+                                    <input type="radio" value="Очень редко" name="answer-03" key="1" keyColor="green">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Очень редко</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Один раз в неделю" name="answer-03" key="11" keyColor="yellow">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Один раз в неделю</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Ежедневно / очень часто" name="answer-03" key="16" keyColor="red">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Ежедневно / очень часто</p>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="test-item" data-group="bookkeeping">
+                            <p class="test-item__question">Есть ли оформленные локально-нормативные акты в компании – учетная политика, положение о премировании, положение о командировках и другие?</p>
+                            <div class="test-answer">
+                                <label class="checkmark">
+                                    <input type="radio" value="Да" name="answer-04" key="1" keyColor="green">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Да</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Частично" name="answer-04" key="4" keyColor="yellow">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Частично</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Нет" name="answer-04" key="4" keyColor="red">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Нет</p>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="test-item" data-group="bookkeeping">
+                            <p class="test-item__question">Как часто меняете бухгалтера?</p>
+                            <div class="test-answer">
+                                <label class="checkmark">
+                                    <input type="radio" value="Давно не менял" name="answer-05" key="5" keyColor="green">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Давно не менял</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Когда бухгалтер сам уходит" name="answer-05" key="6" keyColor="yellow">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Когда бухгалтер сам уходит</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Очень часто" name="answer-05" key="6" keyColor="red">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Очень часто</p>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="test-item" data-group="bookkeeping">
+                            <p class="test-item__question">Кто контролирует бухгалтера, или он предоставлен сам себе?</p>
+                            <div class="test-answer">
+                                <label class="checkmark">
+                                    <input type="radio" value="Ежегодно проводятся аудиторские проверки" name="answer-06" key="7" keyColor="green">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Ежегодно проводятся аудиторские проверки</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Сам контролирую или контролируют знакомые / члены семьи" name="answer-06" key="8" keyColor="yellow">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Сам контролирую или контролируют знакомые / члены семьи</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Зачем его контролировать?" name="answer-06" key="9" keyColor="red">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Зачем его контролировать?</p>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="test-item" data-group="bookkeeping">
+                            <p class="test-item__question">Как часто отвечаете на запросы банка по 115-ФЗ?</p>
+                            <div class="test-answer">
+                                <label class="checkmark">
+                                    <input type="radio" value="Банк не задает таких вопросов" name="answer-07" key="1" keyColor="green">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Банк не задает таких вопросов</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Очень редко" name="answer-07" key="10" keyColor="yellow">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Очень редко</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Постоянно" name="answer-07" key="10" keyColor="red">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Постоянно</p>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="test-item" data-group="bookkeeping">
+                            <p class="test-item__question">Как часто проверяете сохранность своих активов (проводите инвентаризацию)?</p>
+                            <div class="test-answer">
+                                <label class="checkmark">
+                                    <input type="radio" value="Один раз в год" name="answer-08" key="1" keyColor="green">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Один раз в год</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Сам не провожу, но бухгалтерия проводит" name="answer-08" key="1" keyColor="yellow">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Сам не провожу, но бухгалтерия проводит</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Не знаю" name="answer-08" key="11" keyColor="red">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Не знаю</p>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- Налоговый учет -->
+                        <div class="test-item" data-group="taxes">
+                            <p class="test-item__question">Когда была последняя выездная или камеральная налоговая проверка?</p>
+                            <div class="test-answer">
+                                <label class="checkmark">
+                                    <input type="radio" value="В прошлом или в этом году" name="answer-09" key="1" keyColor="green">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">В прошлом или в этом году</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Три года назад" name="answer-09" key="1" keyColor="yellow">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Три года назад</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Не было ни разу" name="answer-09" key="19" keyColor="red">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Не было ни разу</p>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="test-item" data-group="taxes">
+                            <p class="test-item__question">Проводите налоговое планирование?</p>
+                            <div class="test-answer">
+                                <label class="checkmark">
+                                    <input type="radio" value="Да" name="answer-10" key="12" keyColor="green">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Да</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Не знаю" name="answer-10" key="13" keyColor="yellow">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Не знаю</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Нет" name="answer-10" key="13" keyColor="red">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Нет</p>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="test-item" data-group="taxes">
+                            <p class="test-item__question">Сумму НДС рассчитываете и платите или покупаете ежеквартально в последний момент?</p>
+                            <div class="test-answer">
+                                <label class="checkmark">
+                                    <input type="radio" value="Контролирую ежемесячно" name="answer-11" key="12" keyColor="green">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Контролирую ежемесячно</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Как сложится" name="answer-11" key="13" keyColor="yellow">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Как сложится</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Не контролирую" name="answer-11" key="13" keyColor="red">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Не контролирую</p>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="test-item" data-group="taxes">
+                            <p class="test-item__question">Размер совокупной налоговой нагрузки</p>
+                            <div class="test-answer">
+                                <label class="checkmark">
+                                    <input type="radio" value="Выше 5 %" name="answer-12" key="1" keyColor="green">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Выше 5 %</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Меньше 5 %" name="answer-12" key="20" keyColor="yellow">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Меньше 5 %</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Не знаю" name="answer-12" key="20" keyColor="red">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Не знаю</p>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="test-item" data-group="taxes">
+                            <p class="test-item__question">Ваш размер выручки по льготным режимам НО (УСН, патент и др.) подходит к лимиту/порогу?</p>
+                            <div class="test-answer">
+                                <label class="checkmark">
+                                    <input type="radio" value="Нет, мне далеко до лимита" name="answer-13" key="1" keyColor="green">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Нет, мне далеко до лимита</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Да, подходит к порогу выручки" name="answer-13" key="21" keyColor="yellow">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Да, подходит к порогу выручки</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Не знаю, не контролирую" name="answer-13" key="21" keyColor="red">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Не знаю, не контролирую</p>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="test-item" data-group="taxes">
+                            <p class="test-item__question">Как часто приходят «письма счастья» из ФНС по недобросовестным поставщикам с запросом полного пакета документов по вашей деятельности?</p>
+                            <div class="test-answer">
+                                <label class="checkmark">
+                                    <input type="radio" value="Очень редко" name="answer-14" key="1" keyColor="green">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Очень редко</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Постоянно" name="answer-14" key="14" keyColor="yellow">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Постоянно</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Не знаю, не контролирую" name="answer-14" key="14" keyColor="red">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Не знаю, не контролирую</p>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- Управленческий учет -->
+                        <div class="test-item" data-group="management">
+                            <p class="test-item__question">Составлялся ли бизнес-план при запуске бизнеса?</p>
+                            <div class="test-answer">
+                                <label class="checkmark">
+                                    <input type="radio" value="Заказал у сторонней организации" name="answer-15" key="15" keyColor="green">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Заказал у сторонней организации</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Составил самостоятельно" name="answer-15" key="15" keyColor="yellow">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Составил самостоятельно</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Не составлялся" name="answer-15" key="16" keyColor="red">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Не составлялся</p>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="test-item" data-group="management">
+                            <p class="test-item__question">Знаете ли вы, какая текущая динамика роста выручки и прибыли в компании / ИП в месяц/квартал?</p>
+                            <div class="test-answer">
+                                <label class="checkmark">
+                                    <input type="radio" value="Знаю точно" name="answer-16" key="17" keyColor="green">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Знаю точно</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Примерно знаю" name="answer-16" key="17" keyColor="yellow">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Примерно знаю</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Не знаю, не контролирую" name="answer-16" key="16" keyColor="red">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Не знаю, не контролирую</p>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="test-item" data-group="management">
+                            <p class="test-item__question">Какая обстановка в коллективе, как организован рабочий процесс?</p>
+                            <div class="test-answer">
+                                <label class="checkmark">
+                                    <input type="radio" value="Спокойно и прогнозируемоо" name="answer-17" key="17" keyColor="green">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Спокойно и прогнозируемо</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Все в последний момент" name="answer-17" key="18" keyColor="yellow">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Все в последний момент</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Результат не важен, главное – все работают" name="answer-17" key="18" keyColor="yellow">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Результат не важен, главное – все работают</p>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="test-item" data-group="management">
+                            <p class="test-item__question">Есть ли планирование деятельности, ДДС на год и/или план и факт?</p>
+                            <div class="test-answer">
+                                <label class="checkmark">
+                                    <input type="radio" value="Да, есть" name="answer-18" key="12" keyColor="green">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Да, есть</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Не знаю, не контролирую" name="answer-18" key="13" keyColor="green">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Не знаю, не контролирую</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Нет" name="answer-18" key="13" keyColor="green">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Нет</p>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="test-item" data-group="management">
+                            <p class="test-item__question">Есть ли финансовый менеджер и платежный календарь?</p>
+                            <div class="test-answer">
+                                <label class="checkmark">
+                                    <input type="radio" value="Да, есть" name="answer-19" key="12" keyColor="green">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Да, есть</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Не знаю, не контролирую" name="answer-19" key="13" keyColor="yellow">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Не знаю, не контролирую</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Нет" name="answer-19" key="13" keyColor="red">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Нет</p>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- Юридические вопросы -->
+                        <div class="test-item" data-group="legal">
+                            <p class="test-item__question">
+                                Как долго у вас работают сотрудники – меньше года, больше года, есть текучка кадров?
+                            </p>
+                            <div class="test-answer">
+                                <label class="checkmark">
+                                    <input type="radio" value="Больше года" name="answer-20" key="1" keyColor="green">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Больше года</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Меньше года" name="answer-20" key="22" keyColor="yellow">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Меньше года</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Большая текучка кадров" name="answer-20" key="22" keyColor="red">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Большая текучка кадров</p>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="test-item" data-group="legal">
+                            <p class="test-item__question">
+                                Сотрудники состоят с вами в официальных договорных отношениях – трудовые, самозанятые, ИП?
+                            </p>
+                            <div class="test-answer">
+                                <label class="checkmark">
+                                    <input type="radio" value="Да" name="answer-21" key="1" keyColor="green">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Да</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="По-разному" name="answer-21" key="23" keyColor="yellow">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">По-разному</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Нет" name="answer-21" key="23" keyColor="red">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Нет</p>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="test-item" data-group="legal">
+                            <p class="test-item__question">
+                                Проверяете ли сотрудников при устройстве на работу?
+                            </p>
+                            <div class="test-answer">
+                                <label class="checkmark">
+                                    <input type="radio" value="Да" name="answer-22" key="1" keyColor="green">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Да</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Не знаю" name="answer-22" key="24" keyColor="yellow">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Не знаю</p>
+                                </label>
+                                <label class="checkmark">
+                                    <input type="radio" value="Нет" name="answer-22" key="24" keyColor="red">
+                                    <p class="checkmark-item"></p>
+                                    <p class="checkmark-text">Нет</p>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="test-navigation">
+                    <button class="button-link button_prev" onclick="sliderPrev()">
+                        <span class="button-link__label">Предыдущий вопрос</span>
+                    </button>
+                    <button class="button button_next" onclick="sliderNext()" disabled>
+                        <span class="button__label">Следующий вопрос</span>
+                    </button>
+                    <button class="button button_result" onclick="getTestingResult()" disabled>
+                        <span class="button__label">Получить результат</span>
+                    </button>
+                </div>
             </div>
-            <div class="step">
-                <p class="step__active">1</p>
-                <p class="step__full"> / 22</p>
+        </section>
+        <section class="testing-result" hidden>
+            <div class="container">
+                RESULT
+                <button onclick="resultTestDownload()">DOWNLOAD</button>
             </div>
-            <div class="test-wrapper">
-                <form id="form">
-                    <!-- Бухгалтерский учет -->
-                    <div class="test-item" data-group="bookkeeping">
-                        <p class="test-item__question">Кто собирает первичные бухгалтерские документы?</p>
-                        <div class="test-answer">
-                            <label class="checkmark">
-                                <input type="radio" value="Бухгалтерия" name="answer-01" key="1" keyColor="green">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Бухгалтерия</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Я сам собираю" name="answer-01" key="2" keyColor="yellow">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Я сам собираю</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Никто не собирает" name="answer-01" key="3" keyColor="red">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Никто не собирает</p>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="test-item" data-group="bookkeeping">
-                        <p class="test-item__question">Как часто предоставляете в бухгалтерию первичные документы?</p>
-                        <div class="test-answer">
-                            <label class="checkmark">
-                                <input type="radio" value="Ежедневно" name="answer-02" key="1" keyColor="green">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Ежедневно</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Один раз в месяц" name="answer-02" key="2" keyColor="yellow">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Один раз в месяц</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Когда найду документы, тогда и передаю в бухгалтерию" name="answer-02" key="3" keyColor="red">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Когда найду документы, тогда и передаю в бухгалтерию</p>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="test-item" data-group="bookkeeping">
-                        <p class="test-item__question">Как часто бывают банковские платежи со статусом «срочно»?</p>
-                        <div class="test-answer">
-                            <label class="checkmark">
-                                <input type="radio" value="Очень редко" name="answer-03" key="1" keyColor="green">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Очень редко</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Один раз в неделю" name="answer-03" key="11" keyColor="yellow">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Один раз в неделю</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Ежедневно / очень часто" name="answer-03" key="16" keyColor="red">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Ежедневно / очень часто</p>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="test-item" data-group="bookkeeping">
-                        <p class="test-item__question">Есть ли оформленные локально-нормативные акты в компании – учетная политика, положение о премировании, положение о командировках и другие?</p>
-                        <div class="test-answer">
-                            <label class="checkmark">
-                                <input type="radio" value="Да" name="answer-04" key="1" keyColor="green">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Да</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Частично" name="answer-04" key="4" keyColor="yellow">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Частично</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Нет" name="answer-04" key="4" keyColor="red">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Нет</p>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="test-item" data-group="bookkeeping">
-                        <p class="test-item__question">Как часто меняете бухгалтера?</p>
-                        <div class="test-answer">
-                            <label class="checkmark">
-                                <input type="radio" value="Давно не менял" name="answer-05" key="5" keyColor="green">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Давно не менял</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Когда бухгалтер сам уходит" name="answer-05" key="6" keyColor="yellow">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Когда бухгалтер сам уходит</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Очень часто" name="answer-05" key="6" keyColor="red">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Очень часто</p>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="test-item" data-group="bookkeeping">
-                        <p class="test-item__question">Кто контролирует бухгалтера, или он предоставлен сам себе?</p>
-                        <div class="test-answer">
-                            <label class="checkmark">
-                                <input type="radio" value="Ежегодно проводятся аудиторские проверки" name="answer-06" key="7" keyColor="green">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Ежегодно проводятся аудиторские проверки</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Сам контролирую или контролируют знакомые / члены семьи" name="answer-06" key="8" keyColor="yellow">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Сам контролирую или контролируют знакомые / члены семьи</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Зачем его контролировать?" name="answer-06" key="9" keyColor="red">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Зачем его контролировать?</p>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="test-item" data-group="bookkeeping">
-                        <p class="test-item__question">Как часто отвечаете на запросы банка по 115-ФЗ?</p>
-                        <div class="test-answer">
-                            <label class="checkmark">
-                                <input type="radio" value="Банк не задает таких вопросов" name="answer-07" key="1" keyColor="green">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Банк не задает таких вопросов</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Очень редко" name="answer-07" key="10" keyColor="yellow">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Очень редко</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Постоянно" name="answer-07" key="10" keyColor="red">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Постоянно</p>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="test-item" data-group="bookkeeping">
-                        <p class="test-item__question">Как часто проверяете сохранность своих активов (проводите инвентаризацию)?</p>
-                        <div class="test-answer">
-                            <label class="checkmark">
-                                <input type="radio" value="Один раз в год" name="answer-08" key="1" keyColor="green">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Один раз в год</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Сам не провожу, но бухгалтерия проводит" name="answer-08" key="1" keyColor="yellow">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Сам не провожу, но бухгалтерия проводит</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Не знаю" name="answer-08" key="11" keyColor="red">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Не знаю</p>
-                            </label>
-                        </div>
-                    </div>
-                    <!-- Налоговый учет -->
-                    <div class="test-item" data-group="taxes">
-                        <p class="test-item__question">Когда была последняя выездная или камеральная налоговая проверка?</p>
-                        <div class="test-answer">
-                            <label class="checkmark">
-                                <input type="radio" value="В прошлом или в этом году" name="answer-09" key="1" keyColor="green">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">В прошлом или в этом году</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Три года назад" name="answer-09" key="1" keyColor="yellow">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Три года назад</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Не было ни разу" name="answer-09" key="19" keyColor="red">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Не было ни разу</p>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="test-item" data-group="taxes">
-                        <p class="test-item__question">Проводите налоговое планирование?</p>
-                        <div class="test-answer">
-                            <label class="checkmark">
-                                <input type="radio" value="Да" name="answer-10" key="12" keyColor="green">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Да</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Не знаю" name="answer-10" key="13" keyColor="yellow">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Не знаю</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Нет" name="answer-10" key="13" keyColor="red">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Нет</p>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="test-item" data-group="taxes">
-                        <p class="test-item__question">Сумму НДС рассчитываете и платите или покупаете ежеквартально в последний момент?</p>
-                        <div class="test-answer">
-                            <label class="checkmark">
-                                <input type="radio" value="Контролирую ежемесячно" name="answer-11" key="12" keyColor="green">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Контролирую ежемесячно</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Как сложится" name="answer-11" key="13" keyColor="yellow">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Как сложится</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Не контролирую" name="answer-11" key="13" keyColor="red">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Не контролирую</p>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="test-item" data-group="taxes">
-                        <p class="test-item__question">Размер совокупной налоговой нагрузки</p>
-                        <div class="test-answer">
-                            <label class="checkmark">
-                                <input type="radio" value="Выше 5 %" name="answer-12" key="1" keyColor="green">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Выше 5 %</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Меньше 5 %" name="answer-12" key="20" keyColor="yellow">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Меньше 5 %</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Не знаю" name="answer-12" key="20" keyColor="red">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Не знаю</p>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="test-item" data-group="taxes">
-                        <p class="test-item__question">Ваш размер выручки по льготным режимам НО (УСН, патент и др.) подходит к лимиту/порогу?</p>
-                        <div class="test-answer">
-                            <label class="checkmark">
-                                <input type="radio" value="Нет, мне далеко до лимита" name="answer-13" key="1" keyColor="green">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Нет, мне далеко до лимита</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Да, подходит к порогу выручки" name="answer-13" key="21" keyColor="yellow">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Да, подходит к порогу выручки</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Не знаю, не контролирую" name="answer-13" key="21" keyColor="red">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Не знаю, не контролирую</p>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="test-item" data-group="taxes">
-                        <p class="test-item__question">Как часто приходят «письма счастья» из ФНС по недобросовестным поставщикам с запросом полного пакета документов по вашей деятельности?</p>
-                        <div class="test-answer">
-                            <label class="checkmark">
-                                <input type="radio" value="Очень редко" name="answer-14" key="1" keyColor="green">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Очень редко</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Постоянно" name="answer-14" key="14" keyColor="yellow">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Постоянно</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Не знаю, не контролирую" name="answer-14" key="14" keyColor="red">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Не знаю, не контролирую</p>
-                            </label>
-                        </div>
-                    </div>
-                    <!-- Управленческий учет -->
-                    <div class="test-item" data-group="management">
-                        <p class="test-item__question">Составлялся ли бизнес-план при запуске бизнеса?</p>
-                        <div class="test-answer">
-                            <label class="checkmark">
-                                <input type="radio" value="Заказал у сторонней организации" name="answer-15" key="15" keyColor="green">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Заказал у сторонней организации</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Составил самостоятельно" name="answer-15" key="15" keyColor="yellow">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Составил самостоятельно</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Не составлялся" name="answer-15" key="16" keyColor="red">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Не составлялся</p>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="test-item" data-group="management">
-                        <p class="test-item__question">Знаете ли вы, какая текущая динамика роста выручки и прибыли в компании / ИП в месяц/квартал?</p>
-                        <div class="test-answer">
-                            <label class="checkmark">
-                                <input type="radio" value="Знаю точно" name="answer-16" key="17" keyColor="green">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Знаю точно</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Примерно знаю" name="answer-16" key="17" keyColor="yellow">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Примерно знаю</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Не знаю, не контролирую" name="answer-16" key="16" keyColor="red">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Не знаю, не контролирую</p>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="test-item" data-group="management">
-                        <p class="test-item__question">Какая обстановка в коллективе, как организован рабочий процесс?</p>
-                        <div class="test-answer">
-                            <label class="checkmark">
-                                <input type="radio" value="Спокойно и прогнозируемоо" name="answer-17" key="17" keyColor="green">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Спокойно и прогнозируемо</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Все в последний момент" name="answer-17" key="18" keyColor="yellow">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Все в последний момент</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Результат не важен, главное – все работают" name="answer-17" key="18" keyColor="yellow">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Результат не важен, главное – все работают</p>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="test-item" data-group="management">
-                        <p class="test-item__question">Есть ли планирование деятельности, ДДС на год и/или план и факт?</p>
-                        <div class="test-answer">
-                            <label class="checkmark">
-                                <input type="radio" value="Да, есть" name="answer-18" key="12" keyColor="green">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Да, есть</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Не знаю, не контролирую" name="answer-18" key="13" keyColor="green">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Не знаю, не контролирую</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Нет" name="answer-18" key="13" keyColor="green">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Нет</p>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="test-item" data-group="management">
-                        <p class="test-item__question">Есть ли финансовый менеджер и платежный календарь?</p>
-                        <div class="test-answer">
-                            <label class="checkmark">
-                                <input type="radio" value="Да, есть" name="answer-19" key="12" keyColor="green">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Да, есть</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Не знаю, не контролирую" name="answer-19" key="13" keyColor="yellow">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Не знаю, не контролирую</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Нет" name="answer-19" key="13" keyColor="red">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Нет</p>
-                            </label>
-                        </div>
-                    </div>
-                    <!-- Юридические вопросы -->
-                    <div class="test-item" data-group="legal">
-                        <p class="test-item__question">
-                            Как долго у вас работают сотрудники – меньше года, больше года, есть текучка кадров?
-                        </p>
-                        <div class="test-answer">
-                            <label class="checkmark">
-                                <input type="radio" value="Больше года" name="answer-20" key="1" keyColor="green">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Больше года</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Меньше года" name="answer-20" key="22" keyColor="yellow">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Меньше года</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Большая текучка кадров" name="answer-20" key="22" keyColor="red">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Большая текучка кадров</p>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="test-item" data-group="legal">
-                        <p class="test-item__question">
-                            Сотрудники состоят с вами в официальных договорных отношениях – трудовые, самозанятые, ИП?
-                        </p>
-                        <div class="test-answer">
-                            <label class="checkmark">
-                                <input type="radio" value="Да" name="answer-21" key="1" keyColor="green">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Да</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="По-разному" name="answer-21" key="23" keyColor="yellow">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">По-разному</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Нет" name="answer-21" key="23" keyColor="red">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Нет</p>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="test-item" data-group="legal">
-                        <p class="test-item__question">
-                            Проверяете ли сотрудников при устройстве на работу?
-                        </p>
-                        <div class="test-answer">
-                            <label class="checkmark">
-                                <input type="radio" value="Да" name="answer-22" key="1" keyColor="green">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Да</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Не знаю" name="answer-22" key="24" keyColor="yellow">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Не знаю</p>
-                            </label>
-                            <label class="checkmark">
-                                <input type="radio" value="Нет" name="answer-22" key="24" keyColor="red">
-                                <p class="checkmark-item"></p>
-                                <p class="checkmark-text">Нет</p>
-                            </label>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="test-navigation">
-                <button class="button-link button_prev" onclick="sliderPrev()">
-                    <span class="button-link__label">Предыдущий вопрос</span>
-                </button>
-                <button class="button button_next" onclick="sliderNext()" disabled>
-                    <span class="button__label">Следующий вопрос</span>
-                </button>
-                <button class="button button_result" onclick="getTestingResult()" disabled>
-                    <span class="button__label">Получить результат</span>
-                </button>
-            </div>
-        </div>
-    </section>
-    <section class="testing-result" hidden>
-        <div class="container">
-            RESULT
-            <button onclick="resultTestDownload()">DOWNLOAD</button>
-        </div>
-    </section>
+        </section>
+    </div>
     <!-- Scripts -->
     <script src="./main.js"></script>
 </body>

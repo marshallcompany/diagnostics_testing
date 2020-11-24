@@ -30,173 +30,177 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <header class="header">
-        <a href="./" class="logo">
-            <img src="../../assets/images/logo.svg" alt="TOPLINE" class="logo__image">
-        </a>
-        <h1 class="header-label">
-            <span class="bold">Открытый онлайн-тест владельца бизнеса</span>
-            от Натальи Ненашевой и команды экспертов «ТОП ЛАЙН»
-        </h1>
-    </header>
-    <section class="result">
-        <div class="container">
-            <h2 class="title">
-                <span class="purple">Поздравляем!</span>
-            </h2>
-            <h3 class="subtitle">Вы успешно прошли онлайн-тест!</h3>
-            <p class="result__title">Ваша текущая ситуация:</p>
-            <div class="cards">
-                <div class="cards-item">
-                    <img src="../../assets/images/testing/calculator.png" alt="calculator" class="cards-item__icon">
-                    <p class="cards-item__label">Бухгалтерский учет</p>
-                    <div class="cards-item__status">
-                        <img class="cards-item__status-icon" src="../../assets/images/testing/sad.png" alt="sad">
+    <div class="circle-1"></div>
+    <div class="circle-2"></div>
+    <div class="main">
+        <header class="header">
+            <a href="./" class="logo">
+                <img src="../../assets/images/logo.svg" alt="TOPLINE" class="logo__image">
+            </a>
+            <h1 class="header-label">
+                <span class="bold">Открытый онлайн-тест владельца бизнеса</span>
+                от Натальи Ненашевой и команды экспертов «ТОП ЛАЙН»
+            </h1>
+        </header>
+        <section class="result">
+            <div class="container">
+                <h2 class="title">
+                    <span class="purple">Поздравляем!</span>
+                </h2>
+                <h3 class="subtitle">Вы успешно прошли онлайн-тест!</h3>
+                <p class="result__title">Ваша текущая ситуация:</p>
+                <div class="cards">
+                    <div class="cards-item">
+                        <img src="../../assets/images/testing/calculator.png" alt="calculator" class="cards-item__icon">
+                        <p class="cards-item__label">Бухгалтерский учет</p>
+                        <div class="cards-item__status">
+                            <img class="cards-item__status-icon" src="../../assets/images/testing/sad.png" alt="sad">
+                        </div>
+                        <p class="cards-item__description">Ситуация критическая. <br> Опасно</p>
                     </div>
-                    <p class="cards-item__description">Ситуация критическая. <br> Опасно</p>
+                    <div class="cards-item">
+                        <img src="../../assets/images/testing/percent.png" alt="percent" class="cards-item__icon">
+                        <p class="cards-item__label">Налоговый учет</p>
+                        <div class="cards-item__status">
+                            <img class="cards-item__status-icon" src="../../assets/images/testing/sad.png" alt="sad">
+                        </div>
+                        <p class="cards-item__description">Ситуация критическая. <br> Опасно</p>
+                    </div>
+                    <div class="cards-item">
+                        <img src="../../assets/images/testing/arrow.png" alt="arrow" class="cards-item__icon">
+                        <p class="cards-item__label">Управленческий учет</p>
+                        <div class="cards-item__status">
+                            <img class="cards-item__status-icon" src="../../assets/images/testing/sad.png" alt="sad">
+                        </div>
+                        <p class="cards-item__description">Ситуация критическая. <br> Опасно</p>
+                    </div>
+                    <div class="cards-item">
+                        <img src="../../assets/images/testing/balance.png" alt="balance" class="cards-item__icon">
+                        <p class="cards-item__label">Юридические вопросы</p>
+                        <div class="cards-item__status">
+                            <img class="cards-item__status-icon" src="../../assets/images/testing/sad.png" alt="sad">
+                        </div>
+                        <p class="cards-item__description">Ситуация критическая. <br> Опасно</p>
+                    </div>
                 </div>
-                <div class="cards-item">
-                    <img src="../../assets/images/testing/percent.png" alt="percent" class="cards-item__icon">
-                    <p class="cards-item__label">Налоговый учет</p>
-                    <div class="cards-item__status">
-                        <img class="cards-item__status-icon" src="../../assets/images/testing/sad.png" alt="sad">
+                <div class="recommendation"></div>
+            </div>
+        </section>
+        <section class="result-download">
+            <div class="container">
+                <h2 class="result-download__title">
+                    Желаете скачать результаты онлайн-теста или отправить на почту?
+                </h2>
+                <div class="button-wrapper">
+                    <button class="button button_download" onclick="resultTestDownload()">
+                        <span class="button__label">Скачать результаты теста</span>
+                    </button>
+                    <p class="or">или</p>
+                    <div class="send">
+                        <input class="send__input" type="text" placeholder="Ваш Email" name="email">
+                        <button class="button">
+                            <img class="button__icon" src="../../assets/images/testing/result/send.svg" alt="">
+                            <span class="button__label">
+                                Отправить
+                            </span>
+                        </button>
                     </div>
-                    <p class="cards-item__description">Ситуация критическая. <br> Опасно</p>
-                </div>
-                <div class="cards-item">
-                    <img src="../../assets/images/testing/arrow.png" alt="arrow" class="cards-item__icon">
-                    <p class="cards-item__label">Управленческий учет</p>
-                    <div class="cards-item__status">
-                        <img class="cards-item__status-icon" src="../../assets/images/testing/sad.png" alt="sad">
-                    </div>
-                    <p class="cards-item__description">Ситуация критическая. <br> Опасно</p>
-                </div>
-                <div class="cards-item">
-                    <img src="../../assets/images/testing/balance.png" alt="balance" class="cards-item__icon">
-                    <p class="cards-item__label">Юридические вопросы</p>
-                    <div class="cards-item__status">
-                        <img class="cards-item__status-icon" src="../../assets/images/testing/sad.png" alt="sad">
-                    </div>
-                    <p class="cards-item__description">Ситуация критическая. <br> Опасно</p>
                 </div>
             </div>
-            <div class="recommendation"></div>
-        </div>
-    </section>
-    <section class="result-download">
-        <div class="container">
-            <h2 class="result-download__title">
-                Желаете скачать результаты онлайн-теста или отправить на почту?
-            </h2>
-            <div class="button-wrapper">
-                <button class="button button_download" onclick="resultTestDownload()">
-                    <span class="button__label">Скачать результаты теста</span>
-                </button>
-                <p class="or">или</p>
-                <div class="send">
-                    <input class="send__input" type="text" placeholder="Ваш Email" name="email">
-                    <button class="button">
-                        <img class="button__icon" src="../../assets/images/testing/result/send.svg" alt="">
-                        <span class="button__label">
-                            Отправить
-                        </span>
+        </section>
+        <section class="information">
+            <div class="container">
+                <div class="information-wrapper">
+                    <div class="information-flx">
+                        <div class="information-image">
+                            <img src="../../assets/images/testing/result/author.png" alt="uthor" class="information-image__author">
+                        </div>
+                        <div class="information-item">
+                            <h3 class="information-item__title">Внимание!</h3>
+                            <p class="information-item__text">
+                                Более глубокое понимание по 4 ключевым направлениям развития и рисков бизнеса индивидуально по своей ситуации вы можете получить <span class="bold">в открытой 60-минутной <br>
+                                онлайн-диагностике с Натальей Ненашевой и командой <br>
+                                экспертов «ТОП ЛАЙН»!</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="information-content">
+                        <div class="information-content__item">
+                            <p class="information-content__text">
+                                Экономист по образованию, Наталья трудится в бизнесе с 1997 года. Уже в 1999-м, через два года после выпуска из вуза, руководила направлением «бухгалтерская отчётность» в трансрегиональной группе компаний «Метаком» (производственная и торговая специализация). Через год доросла до поста финдиректора группы компаний.
+                            </p>
+                            <p class="information-content__text">
+                                В 2004-м начала самостоятельную управленческую деятельность – стала руководителем  крупного самарского «Агентства консалтинга, аудита и оценки». С тех пор исповедует профессиональный принцип – «Делай, как для себя»: любую проблему клиента решает так, будто это её личный бизнес. Забота, неравнодушное отношение, стремление оградить компанию от любых рисков и сделать ее не только прибыльной, но и растущей – такое отношение встречает предприниматель, пришедший за консалтинговой помощью.
+                            </p>
+                            <p class="information-content__text">
+                                В 2007-2008 Наталья работала финдиректором группы компаний «Мотор» (дорожно-строительная группа с собственной производственной базой и крупными дорожными контрактами, а также сельхозбизнесом). Планирование денежных потоков, оптимизация расходов крупной компании, кредитование, учет и оптимизация, управление бухгалтерской службой, работа с земельными активами – все ключевые бизнес-процессы были познаны на собственном профессиональном опыте.
+                            </p>
+                            <p class="information-content__text">
+                                С февраля 2011-го Наталья ведет деятельность только на московском рынке и только в сфере консалтинга. Сначала – партнерство и позиция гендиректора в группе компаний «Фортис». Затем основание и развитие собственного «Столичного центра аудита и оценки»: успешный растущий бизнес, прочные позиции в индустрии консалтинга, работа с крупными компаниями, опыт исполнения госконтрактов. Менеджмент и экспертность Ненашевой превратили СЦАО в лакомый актив: в конце 2016-го завершилась сделка по продаже консалтингового центра IT-гиганту IBS.
+                            </p>
+                        </div>
+                        <div class="information-content__item">
+                            <p class="information-content__text">
+                                С 2018-го Наталья управляет компанией «ТОП ЛАЙН», принцип которой – предоставлять бизнесменам консалтинговые и бухгалтерские услуги 21 века. «Подход компании – “бухучет как для себя”. Со всеми вытекающими действиями. Мы хотим, чтобы бизнес наших клиентов процветал, а владельцы были довольны процессами. Мы понимаем слабые места в деятельности предпринимателей и оперативно “лечим” эти слабости. Мы создаём новые продукты, помогающие бороться с актуальными проблемами бизнеса. «ТОП ЛАЙН» способен компетентно вести три вида учёта. Если налоговый учёт и бухучет строго регламентированы, то управленческий учёт – полная свобода действий владельца в зависимости от задач и взглядов на развитие бизнеса», – подчеркивает Ненашева.
+                            </p>
+                            <p class="information-content__text">
+                                <span class="bold">
+                                    Кроме того, «ТОП ЛАЙН» – это учёт в режиме онлайн. Предприниматель оперативно получает данные, на основе которых может реагировать и принимать управленческие решения, важные для бизнеса. «ТОП ЛАЙН» всегда заботится о предпринимателях, стремится снабдить их необходимой информацией.
+                                </span>
+                            </p>
+                            <p class="information-content__text">
+                                <span class="bold">
+                                    Юридическая и финансовая грамотность позволяет строить бизнес так, чтобы он был прозрачным, понятным, безопасным для владельца, масштабируемым и быстро развивающимся. Безопасность и благополучие клиента – одна из главных ценностей компании «ТОП ЛАЙН». Именно этому подчинены все рабочие процессы по налаживанию бухгалтерского, налогового и управленческого учёта для бизнесменов, которые обращаются к нам за помощью.
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <button class="details-button">
+                        <span class="details-button__label ">Узнать подробнее</span>
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="details-button__icon">
+                            <path d="M10 6.24268L5.75736 2.00004L1.51472 6.24268" stroke="#8A2C5B" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span class="details-button__label">Свернуть описание</span>
                     </button>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="information">
-        <div class="container">
-            <div class="information-wrapper">
-                <div class="information-flx">
-                    <div class="information-image">
-                        <img src="../../assets/images/testing/result/author.png" alt="uthor" class="information-image__author">
+        </section>
+        <section class="diagnostics">
+            <div class="container">
+                <h2 class="diagnostics__title">
+                    Пройдите онлайн-диагностику за 60 минут <br>
+                    <span class="purple">и получите карту развития и скрытых рисков вашего бизнеса!</span>
+                </h2>
+                <div class="diagnostics-flx">
+                    <div class="diagnostics-column sticky">
+                        <div class="sticky-content">
+                            <p class="diagnostics-column__t">Узнайте:</p>
+                            <ul class="diagnostics-list">
+                                <li class="diagnostics-list__item">Как вести бизнес без обвинений налогового органа в его дроблении</li>
+                                <li class="diagnostics-list__item">Как безболезненно «обелить» свой бизнес</li>
+                                <li class="diagnostics-list__item">Как избежать штрафов от ФНС РФ и блокировок счета в рамках закона № 115-ФЗ</li>
+                                <li class="diagnostics-list__item">Критерии для получения бизнес-кредитов, госконтрактов, участия в тендерах</li>
+                                <li class="diagnostics-list__item">Как попасть в группу льготного налогообложения IT-бизнеса</li>
+                                <li class="diagnostics-list__item">Как не получить «кота в мешке» при покупке бизнеса</li>
+                                <li class="diagnostics-list__item">Как обезопасить себя при продаже бизнеса</li>
+                                <li class="diagnostics-list__item">Какую систему налогообложения выбрать, после отмены ЕНВД</li>
+                            </ul>
+                            <p class="diagnostics-column__text">
+                                Получите бесплатно онлайн-диагностику от профессионалов 
+                                по финансам, налогам, бухгалтерским и юридическим вопросам
+                            </p>
+                        </div>
+                        <button class="button">
+                            <span class="button__label">Записаться на онлайн-диагностику</span>
+                        </button>
                     </div>
-                    <div class="information-item">
-                        <h3 class="information-item__title">Внимание!</h3>
-                        <p class="information-item__text">
-                            Более глубокое понимание по 4 ключевым направлениям развития и рисков бизнеса индивидуально по своей ситуации вы можете получить <span class="bold">в открытой 60-минутной <br>
-                            онлайн-диагностике с Натальей Ненашевой и командой <br>
-                            экспертов «ТОП ЛАЙН»!</span>
-                        </p>
+                    <div class="diagnostics-column">
+                        <img class="diagnostics-column__schema" src="../../assets/images/testing/result/diagnostics-schema.png" alt="">
                     </div>
-                </div>
-                <div class="information-content">
-                    <div class="information-content__item">
-                        <p class="information-content__text">
-                            Экономист по образованию, Наталья трудится в бизнесе с 1997 года. Уже в 1999-м, через два года после выпуска из вуза, руководила направлением «бухгалтерская отчётность» в трансрегиональной группе компаний «Метаком» (производственная и торговая специализация). Через год доросла до поста финдиректора группы компаний.
-                        </p>
-                        <p class="information-content__text">
-                            В 2004-м начала самостоятельную управленческую деятельность – стала руководителем  крупного самарского «Агентства консалтинга, аудита и оценки». С тех пор исповедует профессиональный принцип – «Делай, как для себя»: любую проблему клиента решает так, будто это её личный бизнес. Забота, неравнодушное отношение, стремление оградить компанию от любых рисков и сделать ее не только прибыльной, но и растущей – такое отношение встречает предприниматель, пришедший за консалтинговой помощью.
-                        </p>
-                        <p class="information-content__text">
-                            В 2007-2008 Наталья работала финдиректором группы компаний «Мотор» (дорожно-строительная группа с собственной производственной базой и крупными дорожными контрактами, а также сельхозбизнесом). Планирование денежных потоков, оптимизация расходов крупной компании, кредитование, учет и оптимизация, управление бухгалтерской службой, работа с земельными активами – все ключевые бизнес-процессы были познаны на собственном профессиональном опыте.
-                        </p>
-                        <p class="information-content__text">
-                            С февраля 2011-го Наталья ведет деятельность только на московском рынке и только в сфере консалтинга. Сначала – партнерство и позиция гендиректора в группе компаний «Фортис». Затем основание и развитие собственного «Столичного центра аудита и оценки»: успешный растущий бизнес, прочные позиции в индустрии консалтинга, работа с крупными компаниями, опыт исполнения госконтрактов. Менеджмент и экспертность Ненашевой превратили СЦАО в лакомый актив: в конце 2016-го завершилась сделка по продаже консалтингового центра IT-гиганту IBS.
-                        </p>
-                    </div>
-                    <div class="information-content__item">
-                        <p class="information-content__text">
-                            С 2018-го Наталья управляет компанией «ТОП ЛАЙН», принцип которой – предоставлять бизнесменам консалтинговые и бухгалтерские услуги 21 века. «Подход компании – “бухучет как для себя”. Со всеми вытекающими действиями. Мы хотим, чтобы бизнес наших клиентов процветал, а владельцы были довольны процессами. Мы понимаем слабые места в деятельности предпринимателей и оперативно “лечим” эти слабости. Мы создаём новые продукты, помогающие бороться с актуальными проблемами бизнеса. «ТОП ЛАЙН» способен компетентно вести три вида учёта. Если налоговый учёт и бухучет строго регламентированы, то управленческий учёт – полная свобода действий владельца в зависимости от задач и взглядов на развитие бизнеса», – подчеркивает Ненашева.
-                        </p>
-                        <p class="information-content__text">
-                            <span class="bold">
-                                Кроме того, «ТОП ЛАЙН» – это учёт в режиме онлайн. Предприниматель оперативно получает данные, на основе которых может реагировать и принимать управленческие решения, важные для бизнеса. «ТОП ЛАЙН» всегда заботится о предпринимателях, стремится снабдить их необходимой информацией.
-                            </span>
-                        </p>
-                        <p class="information-content__text">
-                            <span class="bold">
-                                Юридическая и финансовая грамотность позволяет строить бизнес так, чтобы он был прозрачным, понятным, безопасным для владельца, масштабируемым и быстро развивающимся. Безопасность и благополучие клиента – одна из главных ценностей компании «ТОП ЛАЙН». Именно этому подчинены все рабочие процессы по налаживанию бухгалтерского, налогового и управленческого учёта для бизнесменов, которые обращаются к нам за помощью.
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                <button class="details-button">
-                    <span class="details-button__label ">Узнать подробнее</span>
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="details-button__icon">
-                        <path d="M10 6.24268L5.75736 2.00004L1.51472 6.24268" stroke="#8A2C5B" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                    <span class="details-button__label">Свернуть описание</span>
-                </button>
-            </div>
-        </div>
-    </section>
-    <section class="diagnostics">
-        <div class="container">
-            <h2 class="diagnostics__title">
-                Пройдите онлайн-диагностику за 60 минут <br>
-                <span class="purple">и получите карту развития и скрытых рисков вашего бизнеса!</span>
-            </h2>
-            <div class="diagnostics-flx">
-                <div class="diagnostics-column sticky">
-                    <div class="sticky-content">
-                        <p class="diagnostics-column__t">Узнайте:</p>
-                        <ul class="diagnostics-list">
-                            <li class="diagnostics-list__item">Как вести бизнес без обвинений налогового органа в его дроблении</li>
-                            <li class="diagnostics-list__item">Как безболезненно «обелить» свой бизнес</li>
-                            <li class="diagnostics-list__item">Как избежать штрафов от ФНС РФ и блокировок счета в рамках закона № 115-ФЗ</li>
-                            <li class="diagnostics-list__item">Критерии для получения бизнес-кредитов, госконтрактов, участия в тендерах</li>
-                            <li class="diagnostics-list__item">Как попасть в группу льготного налогообложения IT-бизнеса</li>
-                            <li class="diagnostics-list__item">Как не получить «кота в мешке» при покупке бизнеса</li>
-                            <li class="diagnostics-list__item">Как обезопасить себя при продаже бизнеса</li>
-                            <li class="diagnostics-list__item">Какую систему налогообложения выбрать, после отмены ЕНВД</li>
-                        </ul>
-                        <p class="diagnostics-column__text">
-                            Получите бесплатно онлайн-диагностику от профессионалов 
-                            по финансам, налогам, бухгалтерским и юридическим вопросам
-                        </p>
-                    </div>
-                    <button class="button">
-                        <span class="button__label">Записаться на онлайн-диагностику</span>
-                    </button>
-                </div>
-                <div class="diagnostics-column">
-                    <img class="diagnostics-column__schema" src="../../assets/images/testing/result/diagnostics-schema.png" alt="">
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
     <script defer src="../../libs/jquery/jquery-3.5.1.min.js"></script>
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <script src="../../libs/html2canvas.min.js"></script>

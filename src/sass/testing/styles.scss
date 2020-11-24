@@ -44,6 +44,8 @@ body {
     -webkit-tap-highlight-color: transparent;
 }
 
+ @import '../theme/animation';
+
 .title {
     font-family: $interExtraBold;
     font-size: 55px;

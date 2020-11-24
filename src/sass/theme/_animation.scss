@@ -1,0 +1,37 @@
+.main {
+    position: relative;
+    z-index: 1;
+}
+.circle-1 {
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: rgba(175, 120, 202, 0.1);
+    filter: blur(40px);
+    position: fixed;
+    left: 25%;
+    top: 30%;
+    z-index: -1;
+    animation: orbit1 5s linear infinite;
+}
+.circle-2 {
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: rgba(227, 123, 175, 0.1);
+    filter: blur(40px);
+    position: fixed;
+    right: 30%;
+    top: 20%;
+    z-index: -1;
+    animation: orbit2 5s linear infinite;
+}
+
+@keyframes orbit1 {
+    from { -webkit-transform: rotate(0deg) translateX(75%) rotate(0deg); }
+    to   { -webkit-transform: rotate(360deg) translateX(75%) rotate(-360deg); }
+}
+@keyframes orbit2 {
+    from { -webkit-transform: rotate(0deg) translateX(-75%) rotate(0deg); }
+    to   { -webkit-transform: rotate(360deg) translateX(-75%) rotate(-360deg); }
+}

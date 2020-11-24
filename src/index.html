@@ -30,82 +30,86 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <header class="header">
-        <a href="./" class="logo">
-            <img src="./assets/images/logo.svg" alt="TOPLINE" class="logo__image">
-        </a>
-        <h1 class="header-label">
-            <span class="bold">Открытый онлайн-тест владельца бизнеса</span>
-            от Натальи Ненашевой и команды экспертов «ТОП ЛАЙН»
-        </h1>
-    </header>
-    <section class="description">
-        <div class="container">
-            <h2 class="title">
-                Онлайн-тест 
-                <span class="purple">за 10 минут</span>
-            </h2>
-            <div class="description-wrapper">
-                <div class="description-item">
-                    <div class="sticky-content">
-                        <h2 class="description-item__title">
-                            На нашем сайте вы можете прямо сейчас пройти  бесплатный онлайн-тест 
-                            по финансовым, налоговым, бухгалтерским и 
-                            юридическим вопросам ведения вашего бизнеса
-                        </h2>
-                        <p class="description-item__text">
-                            В результате тестирования вы увидите возможные зоны риска вашей 
-                            компании. Но возможно, что у вас все хорошо и волноваться не стоит: 
-                            вы идёте правильным курсом.
-                        </p>
-                        <p class="description-item__text">
-                            В любом случае прохождение теста - это снижение уровня неопределенности 
-                            относительно благополучия вашего бизнеса.
-                        </p>
-                        <p class="description-item__start">Начнём тест?</p>
+    <div class="circle-1"></div>
+    <div class="circle-2"></div>
+    <div class="main">
+        <header class="header">
+            <a href="./" class="logo">
+                <img src="./assets/images/logo.svg" alt="TOPLINE" class="logo__image">
+            </a>
+            <h1 class="header-label">
+                <span class="bold">Открытый онлайн-тест владельца бизнеса</span>
+                от Натальи Ненашевой и команды экспертов «ТОП ЛАЙН»
+            </h1>
+        </header>
+        <section class="description">
+            <div class="container">
+                <h2 class="title">
+                    Онлайн-тест 
+                    <span class="purple">за 10 минут</span>
+                </h2>
+                <div class="description-wrapper">
+                    <div class="description-item">
+                        <div class="sticky-content">
+                            <h2 class="description-item__title">
+                                На нашем сайте вы можете прямо сейчас пройти  бесплатный онлайн-тест 
+                                по финансовым, налоговым, бухгалтерским и 
+                                юридическим вопросам ведения вашего бизнеса
+                            </h2>
+                            <p class="description-item__text">
+                                В результате тестирования вы увидите возможные зоны риска вашей 
+                                компании. Но возможно, что у вас все хорошо и волноваться не стоит: 
+                                вы идёте правильным курсом.
+                            </p>
+                            <p class="description-item__text">
+                                В любом случае прохождение теста - это снижение уровня неопределенности 
+                                относительно благополучия вашего бизнеса.
+                            </p>
+                            <p class="description-item__start">Начнём тест?</p>
+                        </div>
+                        <div class="button-wrapper">
+                            <button class="button" onclick="goToTest()">
+                                <span class="button__label">Пройти онлайн-тест</span>
+                            </button>
+                            <button class="button-link">
+                                <span class="button-link__label">Узнать подробнее</span>
+                            </button>
+                        </div>
                     </div>
-                    <div class="button-wrapper">
+                    <div class="description-image">
+                        <img src="./assets/images/desc-schema.png" alt="" class="description-image__schema">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="information">
+            <div class="container">
+                <div class="information-wrapper">
+                    <div class="information-image">
+                        <img src="./assets/images/author.png" alt="" class="information-image__author">
+                    </div>
+                    <div class="information-item">
+                        <div class="sticky-content">
+                            <h2 class="information-item__title">
+                                В 2020 году одни бизнесы получили господдержку,
+                                <span class="purple">а другие закрылись</span>
+                            </h2>
+                            <p class="information-item__text">
+                                А многих ждут проверки ФНС и налоговые.
+                            </p>
+                            <p class="information-item__text">
+                                <span class="bold">Пройдите онлайн-тест</span> и определите точки роста и развития <br>
+                                своей компании в 2021 году!
+                            </p>
+                        </div>
                         <button class="button" onclick="goToTest()">
                             <span class="button__label">Пройти онлайн-тест</span>
                         </button>
-                        <button class="button-link">
-                            <span class="button-link__label">Узнать подробнее</span>
-                        </button>
                     </div>
                 </div>
-                <div class="description-image">
-                    <img src="./assets/images/desc-schema.png" alt="" class="description-image__schema">
-                </div>
             </div>
-        </div>
-    </section>
-    <section class="information">
-        <div class="container">
-            <div class="information-wrapper">
-                <div class="information-image">
-                    <img src="./assets/images/author.png" alt="" class="information-image__author">
-                </div>
-                <div class="information-item">
-                    <div class="sticky-content">
-                        <h2 class="information-item__title">
-                            В 2020 году одни бизнесы получили господдержку,
-                            <span class="purple">а другие закрылись</span>
-                        </h2>
-                        <p class="information-item__text">
-                            А многих ждут проверки ФНС и налоговые.
-                        </p>
-                        <p class="information-item__text">
-                            <span class="bold">Пройдите онлайн-тест</span> и определите точки роста и развития <br>
-                            своей компании в 2021 году!
-                        </p>
-                    </div>
-                    <button class="button" onclick="goToTest()">
-                        <span class="button__label">Пройти онлайн-тест</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
     <script defer src="./libs/jquery/jquery-3.5.1.min.js"></script>
     <script src="./main.js"></script>
 </body>
