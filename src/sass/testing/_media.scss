@@ -51,6 +51,9 @@
     }
     .header-label{
         text-align: center;
+        .bold {
+            display: inline;
+        }
     }
     .checkmark-item {
         height: 35px;

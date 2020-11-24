@@ -221,6 +221,9 @@ body {
         color: #46DD95;
     }
 }
+.recommendation-item.green:last-child{
+    margin-bottom: 0;
+}
 .recommendation-status {
     flex-shrink: 0;
     background-color: #DE3943;
@@ -235,9 +238,6 @@ body {
 .recommendation-status__icon {
     height: 30px;
 }
-.recommendation-information {
-    padding-top: 15px;
-}
 .recommendation-information__title {
     color: #DE3943;
     text-transform: uppercase;
@@ -250,6 +250,7 @@ body {
     font-size: 15px;
     font-family: $interLight;
     line-height: 1.5;
+    padding-top: 15px;
 }
 // DOWNLOAD
 .result-download {
@@ -263,6 +264,7 @@ body {
 .result-download__title {
     font-size: 25px;
     text-align: center;
+    margin: 0;
     margin-bottom: 50px;
 }
 .send {
@@ -382,6 +384,7 @@ body {
     &__title {
         font-size: 33px;
         font-family: $interExtraBold;
+        margin: 0;
         margin-bottom: 50px;
         text-align: center;
     }

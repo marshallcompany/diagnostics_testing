@@ -400,6 +400,9 @@ body {
 .recommendation-item.green .recommendation-information__title {
   color: #46DD95; }
 
+.recommendation-item.green:last-child {
+  margin-bottom: 0; }
+
 .recommendation-status {
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -421,9 +424,6 @@ body {
 .recommendation-status__icon {
   height: 30px; }
 
-.recommendation-information {
-  padding-top: 15px; }
-
 .recommendation-information__title {
   color: #DE3943;
   text-transform: uppercase;
@@ -435,7 +435,8 @@ body {
 .recommendation-information {
   font-size: 15px;
   font-family: "Inter Light";
-  line-height: 1.5; }
+  line-height: 1.5;
+  padding-top: 15px; }
 
 .result-download .button-wrapper {
   -webkit-box-pack: center;
@@ -448,6 +449,7 @@ body {
 .result-download__title {
   font-size: 25px;
   text-align: center;
+  margin: 0;
   margin-bottom: 50px; }
 
 .send {
@@ -611,6 +613,7 @@ body {
 .diagnostics__title {
   font-size: 33px;
   font-family: "Inter ExtraBold";
+  margin: 0;
   margin-bottom: 50px;
   text-align: center; }
 
@@ -711,15 +714,108 @@ body {
   .header {
     padding: 30px; }
   .header-label .bold {
-    display: block; } }
+    display: block; }
+  .result-download__title {
+    font-size: 22px; }
+  .result-download .or {
+    margin: 0 20px; }
+  .information {
+    padding: 100px 0 75px 0; }
+  .information-item__title {
+    font-size: 35px;
+    margin-bottom: 25px; }
+  .information-item__text {
+    font-size: 16px; }
+    .information-item__text br {
+      display: none; }
+  .information-flx {
+    margin-bottom: 40px; }
+  .information-content__text {
+    font-size: 16px; }
+  .diagnostics-flx {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .diagnostics__title {
+    font-size: 30px; }
+  .diagnostics-list {
+    margin-bottom: 25px; }
+  .diagnostics-list__item {
+    margin-bottom: 5px; }
+  .diagnostics-column__text {
+    margin-bottom: 25px; } }
 
 @media screen and (max-width: 992px) {
+  body {
+    padding-bottom: 25px; }
   .title {
     font-size: 45px; }
   .logo__image {
     height: 30px; }
   .header-label {
-    font-size: 14px; } }
+    font-size: 14px; }
+  .subtitle {
+    font-size: 30px;
+    margin-bottom: 30px; }
+  .result__title {
+    font-size: 22px;
+    margin-bottom: 35px; }
+  .cards {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 30px; }
+  .cards-item {
+    width: 300px;
+    margin-bottom: 15px;
+    margin-right: 15px; }
+    .cards-item:nth-child(2n) {
+      margin-right: 0; }
+  .recommendation {
+    padding: 30px 20px; }
+  .recommendation-item {
+    margin-bottom: 15px; }
+  .recommendation-item.last {
+    padding-bottom: 29px;
+    margin-bottom: 29px; }
+  .result-download .or {
+    margin: 20px 0; }
+  .result-download .button-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .information-flx {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .information-image {
+    width: 80%;
+    margin-bottom: 20px; }
+  .information-item {
+    width: 100%; }
+  .information-item__title {
+    text-align: center; }
+  .information-content__text {
+    margin-bottom: 20px; }
+  .diagnostics-column__text {
+    text-align: center; }
+  .diagnostics-flx {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .diagnostics-column {
+    width: 100%; }
+    .diagnostics-column .button {
+      margin: 0 auto; }
+  .diagnostics-column:not(.sticky) {
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1;
+    margin-bottom: 20px;
+    width: 80%; } }
 
 @media screen and (max-width: 768px) {
   .title {
@@ -732,7 +828,29 @@ body {
   .logo {
     margin-bottom: 15px; }
   .header-label {
-    text-align: center; } }
+    text-align: center; }
+    .header-label .bold {
+      display: inline; }
+  .subtitle {
+    font-size: 25px; }
+  .result__title {
+    font-size: 20px; }
+  .cards-item {
+    width: 45%; }
+  .cards-item__label,
+  .cards-item__description {
+    font-size: 16px; }
+  .send {
+    width: 100%; }
+    .send__input {
+      width: 50%; }
+    .send .button {
+      width: 50%;
+      min-width: inherit; }
+  .diagnostics__title {
+    font-size: 25px; }
+    .diagnostics__title br {
+      display: none; } }
 
 @media screen and (max-width: 568px) {
   .title {
@@ -740,4 +858,70 @@ body {
   .button__label {
     font-size: 14px; }
   .header {
-    margin-bottom: 0; } }
+    margin-bottom: 0; }
+  .subtitle {
+    font-size: 18px;
+    margin-bottom: 25px; }
+  .result__title {
+    font-size: 16px;
+    margin-bottom: 15px; }
+  .cards-item {
+    width: 300px;
+    min-height: 300px;
+    margin-right: 0; }
+  .recommendation {
+    padding: 20px 10px; }
+  .recommendation-information {
+    padding-top: 7px;
+    font-size: 14px; }
+  .recommendation-status {
+    height: 35px;
+    width: 35px;
+    margin-right: 10px; }
+    .recommendation-status__icon {
+      height: 20px; }
+  .result-download__title {
+    font-size: 18px;
+    margin-bottom: 25px; }
+  .send {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .send__input {
+      width: 280px;
+      margin-bottom: 20px;
+      height: 40px;
+      border-right: 1px solid #8A2C5B;
+      border-radius: 3px;
+      font-size: 14px; }
+    .send .button {
+      width: inherit; }
+  .information {
+    padding: 50px 0; }
+  .information-flx {
+    margin-bottom: 15px; }
+  .information-image {
+    width: 100%; }
+  .information-item__text {
+    text-align: center; }
+  .information-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .information-content__item {
+    width: 100%; }
+  .information-content__text {
+    font-size: 14px; }
+  .diagnostics__title {
+    font-size: 20px; }
+  .diagnostics-column__text {
+    line-height: 1.3; }
+  .diagnostics-list__item {
+    padding-left: 20px; }
+  .diagnostics-column:not(.sticky) {
+    width: 100%; } }

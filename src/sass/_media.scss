@@ -115,6 +115,9 @@
     }
     .header-label{
         text-align: center;
+        .bold {
+            display: inline;
+        }
     }
 }
 
@@ -158,5 +161,12 @@
     .information-item__text {
         font-size: 16px;
         margin-bottom: 15px;
+    }
+}
+@include maxWidth-375 {
+    .description {
+       &:after {
+            border-radius: 0 0 50% 50%/0 0 50% 50%;
+       }
     }
 }
