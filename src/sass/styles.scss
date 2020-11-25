@@ -30,11 +30,14 @@
     font-style: normal;
     font-weight: 800;
 }
+
 html,
 body {
-    overflow-x: hidden;
-    overflow: auto;
+    overflow: hidden;
+    overflow-y: auto;
+    min-height: 100vh;
 }
+
 body {
     color: #1E1E1E;
     background-color: #ffffff;
