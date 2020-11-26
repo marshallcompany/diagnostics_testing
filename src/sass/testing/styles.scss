@@ -32,8 +32,8 @@
 }
 
 html, body {
-    overflow-x: hidden;
-    position: fixed;
+    overflow: hidden;
+    overflow-y: auto;
     height: 100%;
     width: 100%;
 }
@@ -43,7 +43,6 @@ html, body {
     background-color:#ffffff;
     font-family: $interRegular, Arial, sans-serif;
     font-size: 18px;
-    padding-bottom: 15px;
     * {
         box-sizing: border-box;
         -webkit-tap-highlight-color: transparent;
@@ -90,6 +89,11 @@ html, body {
         color: $purple;
         font-family: $interExtraBold;
         font-size: 15px;
+    }
+
+    .main {
+        height: calc(100% - 80px);
+        width: 100%;
     }
 
     // CUSTOM RADIO BUTTON
@@ -235,9 +239,16 @@ html, body {
     }
     // TEST NAVIGATION
     .test-navigation {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 10px 0;
+        .container { 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 
     .button_prev {
@@ -245,7 +256,6 @@ html, body {
         pointer-events: none;
     }
 
-    .button_prev,
     .button_next,
     .button_result {
         transition: opacity .25s linear;

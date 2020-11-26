@@ -190,10 +190,8 @@ table {
   font-weight: 800; }
 
 html, body {
-  overflow-x: hidden;
-  position: fixed;
-  height: 100%;
-  width: 100%; }
+  overflow: hidden;
+  overflow-y: auto; }
 
 .tst-result {
   color: #1E1E1E;
@@ -735,76 +733,76 @@ html, body {
     .tst-result .diagnostics-column__text {
       margin-bottom: 25px; } }
   @media screen and (max-width: 992px) {
-    .tst-result body {
-      padding-bottom: 25px; }
-    .tst-result .title {
-      font-size: 45px; }
-    .tst-result .logo__image {
-      height: 30px; }
-    .tst-result .header-label {
-      font-size: 14px; }
-    .tst-result .subtitle {
-      font-size: 30px;
-      margin-bottom: 30px; }
-    .tst-result .result__title {
-      font-size: 22px;
-      margin-bottom: 35px; }
-    .tst-result .cards {
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      margin-bottom: 30px; }
-    .tst-result .cards-item {
-      width: 300px;
-      margin-bottom: 15px;
-      margin-right: 15px; }
-      .tst-result .cards-item:nth-child(2n) {
-        margin-right: 0; }
-    .tst-result .recommendation {
-      padding: 30px 20px; }
-    .tst-result .recommendation-item {
-      margin-bottom: 15px; }
-    .tst-result .recommendation-item.last {
-      padding-bottom: 29px;
-      margin-bottom: 29px; }
-    .tst-result .result-download .or {
-      margin: 20px 0; }
-    .tst-result .result-download .button-wrapper {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column; }
-    .tst-result .information-flx {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column; }
-    .tst-result .information-image {
-      width: 80%;
-      margin-bottom: 20px; }
-    .tst-result .information-item {
-      width: 100%; }
-    .tst-result .information-item__title {
-      text-align: center; }
-    .tst-result .information-content__text {
-      margin-bottom: 20px; }
-    .tst-result .diagnostics-column__text {
-      text-align: center; }
-    .tst-result .diagnostics-flx {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column; }
-    .tst-result .diagnostics-column {
-      width: 100%; }
-      .tst-result .diagnostics-column .button {
-        margin: 0 auto; }
-    .tst-result .diagnostics-column:not(.sticky) {
-      -webkit-box-ordinal-group: 0;
-      -ms-flex-order: -1;
-      order: -1;
-      margin-bottom: 20px;
-      width: 80%; } }
+    .tst-result {
+      padding-bottom: 50px; }
+      .tst-result .title {
+        font-size: 45px; }
+      .tst-result .logo__image {
+        height: 30px; }
+      .tst-result .header-label {
+        font-size: 14px; }
+      .tst-result .subtitle {
+        font-size: 30px;
+        margin-bottom: 30px; }
+      .tst-result .result__title {
+        font-size: 22px;
+        margin-bottom: 35px; }
+      .tst-result .cards {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin-bottom: 30px; }
+      .tst-result .cards-item {
+        width: 300px;
+        margin-bottom: 15px;
+        margin-right: 15px; }
+        .tst-result .cards-item:nth-child(2n) {
+          margin-right: 0; }
+      .tst-result .recommendation {
+        padding: 30px 20px; }
+      .tst-result .recommendation-item {
+        margin-bottom: 15px; }
+      .tst-result .recommendation-item.last {
+        padding-bottom: 29px;
+        margin-bottom: 29px; }
+      .tst-result .result-download .or {
+        margin: 20px 0; }
+      .tst-result .result-download .button-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column; }
+      .tst-result .information-flx {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column; }
+      .tst-result .information-image {
+        width: 80%;
+        margin-bottom: 20px; }
+      .tst-result .information-item {
+        width: 100%; }
+      .tst-result .information-item__title {
+        text-align: center; }
+      .tst-result .information-content__text {
+        margin-bottom: 20px; }
+      .tst-result .diagnostics-column__text {
+        text-align: center; }
+      .tst-result .diagnostics-flx {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column; }
+      .tst-result .diagnostics-column {
+        width: 100%; }
+        .tst-result .diagnostics-column .button {
+          margin: 0 auto; }
+      .tst-result .diagnostics-column:not(.sticky) {
+        -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+        order: -1;
+        margin-bottom: 20px;
+        width: 80%; } }
   @media screen and (max-width: 768px) {
     .tst-result .title {
       font-size: 35px; }

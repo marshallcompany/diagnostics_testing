@@ -32,11 +32,10 @@
 }
 
 html, body {
-    overflow-x: hidden;
-    position: fixed;
-    height: 100%;
-    width: 100%;
+    overflow: hidden;
+    overflow-y: auto;
 }
+
 .tst-main {
     color: #1E1E1E;
     background-color: #ffffff;

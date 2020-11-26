@@ -510,22 +510,18 @@
                     </form>
                 </div>
                 <div class="test-navigation">
-                    <button class="button-link button_prev" onclick="sliderPrev()">
-                        <span class="button-link__label">Предыдущий вопрос</span>
-                    </button>
-                    <button class="button button_next" onclick="sliderNext()" disabled>
-                        <span class="button__label">Следующий вопрос</span>
-                    </button>
-                    <button class="button button_result" onclick="getTestingResult()" disabled>
-                        <span class="button__label">Получить результат</span>
-                    </button>
+                    <div class="container">
+                        <button class="button-link button_prev" onclick="sliderPrev()">
+                            <span class="button-link__label">Предыдущий вопрос</span>
+                        </button>
+                        <button class="button button_next" onclick="sliderNext()" disabled>
+                            <span class="button__label">Следующий вопрос</span>
+                        </button>
+                        <button class="button button_result" onclick="getTestingResult()" disabled>
+                            <span class="button__label">Получить результат</span>
+                        </button>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section class="testing-result" hidden>
-            <div class="container">
-                RESULT
-                <button onclick="resultTestDownload()">DOWNLOAD</button>
             </div>
         </section>
     </div>

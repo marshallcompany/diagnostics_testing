@@ -118,8 +118,11 @@ function sliderNext() {
         checkStates(sliderItem[sliderIndex].dataset['group']);
     }
 }
+
 document.querySelector('.step .step__full').innerHTML = ` / ${sliderItem.length}`;
+
 function checkStates(nameStates) {
+    document.querySelector('.test-wrapper').scrollIntoView({block: 'center', behavior: 'smooth'});
     document.querySelector('.step .step__active').innerHTML = `${sliderIndex + 1}`
     // DISABLED - ACTIVE TABS
     sliderTabs.forEach(item => {

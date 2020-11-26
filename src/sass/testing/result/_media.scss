@@ -55,9 +55,7 @@
 }
 
 @include maxWidth-992 {
-    body {
-        padding-bottom: 25px;
-    }
+    padding-bottom: 50px;
     .title {
         font-size: 45px;
     }
