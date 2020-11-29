@@ -94,6 +94,7 @@ html, body {
     .main {
         height: calc(100% - 80px);
         width: 100%;
+        overflow: auto;
     }
 
     // CUSTOM RADIO BUTTON

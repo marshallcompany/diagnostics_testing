@@ -298,7 +298,8 @@ html, body {
     font-size: 15px; }
   .tst-testing .main {
     height: calc(100% - 80px);
-    width: 100%; }
+    width: 100%;
+    overflow: auto; }
   .tst-testing .checkmark {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -562,8 +563,7 @@ html, body {
         margin-bottom: 15px; } }
   @media screen and (max-width: 568px) {
     .tst-testing .main {
-      height: calc(100% - 75px);
-      overflow: auto; }
+      height: calc(100% - 75px); }
     .tst-testing .title {
       font-size: 30px; }
     .tst-testing .button__label {
@@ -593,20 +593,18 @@ html, body {
           -webkit-box-ordinal-group: -1;
           -ms-flex-order: -2;
           order: -2; }
-    .tst-testing .test-navigation {
-      background-color: #ffffff; }
-      .tst-testing .test-navigation .container {
-        -ms-flex-pack: distribute;
-        justify-content: space-around; }
-      .tst-testing .test-navigation .button_next, .tst-testing .test-navigation .button_result {
-        max-width: 200px;
-        height: 50px; }
-      .tst-testing .test-navigation .button__label {
-        font-size: 12px; }
-      .tst-testing .test-navigation .button-link {
-        padding-bottom: 5px; }
-        .tst-testing .test-navigation .button-link__label {
-          font-size: 12px; } }
+    .tst-testing .test-navigation .container {
+      -ms-flex-pack: distribute;
+      justify-content: space-around; }
+    .tst-testing .test-navigation .button_next, .tst-testing .test-navigation .button_result {
+      max-width: 200px;
+      height: 50px; }
+    .tst-testing .test-navigation .button__label {
+      font-size: 12px; }
+    .tst-testing .test-navigation .button-link {
+      padding-bottom: 5px; }
+      .tst-testing .test-navigation .button-link__label {
+        font-size: 12px; } }
   @media screen and (max-width: 375px) {
     .tst-testing .main {
       height: calc(100% - 65px); }

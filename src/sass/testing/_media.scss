@@ -86,7 +86,6 @@
 @include maxWidth-568 {
     .main {
         height: calc(100% - 75px);
-        overflow: auto;
     }
     .title {
         font-size: 30px;
@@ -125,7 +124,6 @@
         }
     }
     .test-navigation{
-        background-color: #ffffff;
         .container {
             justify-content: space-around;
         }
