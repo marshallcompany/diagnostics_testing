@@ -125,15 +125,27 @@ document.querySelector('.details-button').addEventListener('click', function() {
     }
 });
 
+
+function goToDiagnostics() {
+    window.location.href = 'https://bit.ly/2Vp9Cr4';
+}
 // GENERATION - DOWNLOAD TEST RESULPR
 function resultTestDownload() {
     const data = document.body.querySelector('.result');
+    const clone = document.querySelector('.clone');
     document.querySelector('body').classList.add('hide-scrollbar');
     html2canvas(data, {
+        onclone: function (clonedDoc) {
+            clonedDoc.querySelector('.clone').style = `
+            position: inherit;
+            left: inherit;
+            padding-top: 25px;
+            `;
+        },
         scrollX: 0,
         scrollY: -window.scrollY,
-        width:  data.clientWidth , 
-        height: data.clientHeight,
+        width:  window.innerWidth , 
+        height: window.innerWidth > 992 ? data.clientHeight + (clone.clientHeight / 2) : data.clientHeight + clone.clientHeight,
     })
     .then(canvas => {
         document.querySelector('body').classList.remove('hide-scrollbar');

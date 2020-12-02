@@ -33,16 +33,17 @@
     <div class="circle-1"></div>
     <div class="circle-2"></div>
     <div class="main">
-        <header class="header">
-            <a href="./" class="logo">
-                <img src="../../assets/images/logo.svg" alt="TOPLINE" class="logo__image">
-            </a>
-            <h1 class="header-label">
-                <span class="bold">Открытый онлайн-тест владельца бизнеса</span>
-                от Натальи Ненашевой и команды экспертов «ТОП ЛАЙН»
-            </h1>
-        </header>
         <section class="result">
+            <header class="header">
+                <a href="./" class="logo">
+                    <img src="../../assets/images/logo.svg" alt="TOPLINE" class="logo__image">
+                </a>
+                <h1 class="header-label">
+                    <span class="bold">Открытый онлайн-тест владельца бизнеса</span>
+                    от Натальи Ненашевой и команды экспертов «ТОП ЛАЙН»
+                </h1>
+                <a href="tel:88003508108" class="header__phone">8 (800) 350-81-08</a>
+            </header>
             <div class="container">
                 <h2 class="title">
                     <span class="purple">Поздравляем!</span>
@@ -85,6 +86,25 @@
                 </div>
                 <div class="recommendation"></div>
             </div>
+            <div class="clone">
+                <div class="container">
+                    <div class="information-wrapper">
+                        <div class="information-flx">
+                            <div class="information-image">
+                                <img src="../../assets/images/testing/result/author.png" alt="uthor" class="information-image__author">
+                            </div>
+                            <div class="information-item">
+                                <h3 class="information-item__title">Внимание!</h3>
+                                <p class="information-item__text">
+                                    Более глубокое понимание по 4 ключевым направлениям развития и рисков бизнеса индивидуально по своей ситуации вы можете получить <span class="bold">в открытой 60-минутной <br>
+                                    онлайн-диагностике с Натальей Ненашевой и командой <br>
+                                    экспертов «TOPLINE»!</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="result-download">
             <div class="container">
@@ -95,7 +115,7 @@
                     <button class="button button_download" onclick="resultTestDownload()">
                         <span class="button__label">Скачать результаты теста</span>
                     </button>
-                    <p class="or">или</p>
+                    <!-- <p class="or">или</p>
                     <div class="send">
                         <input class="send__input" type="text" placeholder="Ваш Email" name="email">
                         <button class="button">
@@ -104,7 +124,7 @@
                                 Отправить
                             </span>
                         </button>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
@@ -120,7 +140,7 @@
                             <p class="information-item__text">
                                 Более глубокое понимание по 4 ключевым направлениям развития и рисков бизнеса индивидуально по своей ситуации вы можете получить <span class="bold">в открытой 60-минутной <br>
                                 онлайн-диагностике с Натальей Ненашевой и командой <br>
-                                экспертов «ТОП ЛАЙН»!</span>
+                                экспертов «TOPLINE»!</span>
                             </p>
                         </div>
                     </div>
@@ -190,7 +210,7 @@
                                 по финансам, налогам, бухгалтерским и юридическим вопросам
                             </p>
                         </div>
-                        <button class="button">
+                        <button class="button" onclick="goToDiagnostics()">
                             <span class="button__label">Записаться на онлайн-диагностику</span>
                         </button>
                     </div>

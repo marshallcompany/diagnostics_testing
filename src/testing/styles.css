@@ -265,7 +265,7 @@ html, body {
     font-size: 55px;
     text-align: center;
     margin: 0;
-    margin-bottom: 60px; }
+    margin-bottom: 40px; }
   .tst-testing .bold {
     font-family: "Inter Bold"; }
   .tst-testing .button {
@@ -347,15 +347,21 @@ html, body {
     align-items: center;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between;
-    margin-bottom: 55px; }
+    justify-content: space-between; }
   .tst-testing .logo {
     -ms-flex-negative: 0;
     flex-shrink: 0; }
   .tst-testing .header-label {
     font-size: 16px;
     font-family: "Inter Light";
-    font-weight: normal; }
+    font-weight: normal;
+    text-align: center; }
+    .tst-testing .header-label .bold {
+      display: block; }
+  .tst-testing .header__phone {
+    color: #8A2C5B;
+    font-family: "Inter ExtraBold";
+    text-decoration: none; }
   .tst-testing .tabs {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -364,7 +370,7 @@ html, body {
     -ms-flex-pack: center;
     justify-content: center;
     border-bottom: 2px solid #E1E1E1;
-    margin-bottom: 95px; }
+    margin-bottom: 50px; }
     .tst-testing .tabs__item {
       text-align: center;
       text-transform: uppercase;
@@ -509,16 +515,25 @@ html, body {
       max-width: 280px;
       height: 60px; }
     .tst-testing .header {
-      padding: 30px; }
-    .tst-testing .header-label .bold {
-      display: block; } }
+      padding: 30px; } }
   @media screen and (max-width: 992px) {
     .tst-testing .title {
       font-size: 45px; }
     .tst-testing .logo__image {
       height: 30px; }
+    .tst-testing .header {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+    .tst-testing .logo {
+      margin-bottom: 15px; }
     .tst-testing .header-label {
-      font-size: 14px; }
+      text-align: center;
+      font-size: 14px;
+      margin-bottom: 15px; }
+      .tst-testing .header-label .bold {
+        display: inline; }
     .tst-testing .tabs {
       margin-bottom: 50px;
       -webkit-box-pack: justify;
@@ -532,17 +547,6 @@ html, body {
   @media screen and (max-width: 768px) {
     .tst-testing .title {
       font-size: 35px; }
-    .tst-testing .header {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column; }
-    .tst-testing .logo {
-      margin-bottom: 15px; }
-    .tst-testing .header-label {
-      text-align: center; }
-      .tst-testing .header-label .bold {
-        display: inline; }
     .tst-testing .checkmark-item {
       height: 35px;
       width: 35px; }
@@ -568,8 +572,6 @@ html, body {
       font-size: 30px; }
     .tst-testing .button__label {
       font-size: 14px; }
-    .tst-testing .header {
-      margin-bottom: 0; }
     .tst-testing .tabs__item br {
       display: block; }
     .tst-testing .test-item__question {

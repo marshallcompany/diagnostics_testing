@@ -7,11 +7,6 @@
     .header {
         padding: 30px;
     }
-    .header-label {
-        .bold {
-            display: block;
-        }
-    }
 }
 
 @include maxWidth-992 {
@@ -23,8 +18,19 @@
             height: 30px;
         }
     }
-    .header-label {
+    .header {
+        flex-direction: column;
+    }
+    .logo{
+        margin-bottom: 15px;
+    }
+    .header-label{
+        text-align: center;
         font-size: 14px;
+        margin-bottom: 15px;
+        .bold {
+            display: inline;
+        }
     }
     .tabs {
         margin-bottom: 50px;
@@ -42,18 +48,6 @@
 @include maxWidth-768 {
     .title {
         font-size: 35px;
-    }
-    .header {
-        flex-direction: column;
-    }
-    .logo{
-        margin-bottom: 15px;
-    }
-    .header-label{
-        text-align: center;
-        .bold {
-            display: inline;
-        }
     }
     .checkmark-item {
         height: 35px;
@@ -94,9 +88,6 @@
         &__label {
             font-size: 14px;
         }
-    }
-    .header{
-        margin-bottom: 0;
     }
     .tabs__item{
         br {

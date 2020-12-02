@@ -319,15 +319,21 @@ html, body {
     align-items: center;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between;
-    margin-bottom: 55px; }
+    justify-content: space-between; }
   .tst-main .logo {
     -ms-flex-negative: 0;
     flex-shrink: 0; }
   .tst-main .header-label {
     font-size: 16px;
     font-family: "Inter Light";
-    font-weight: normal; }
+    font-weight: normal;
+    text-align: center; }
+    .tst-main .header-label .bold {
+      display: block; }
+  .tst-main .header__phone {
+    color: #8A2C5B;
+    font-family: "Inter ExtraBold";
+    text-decoration: none; }
   .tst-main .description {
     position: relative;
     padding-bottom: 150px;
@@ -435,8 +441,6 @@ html, body {
       height: 60px; }
     .tst-main .header {
       padding: 30px; }
-    .tst-main .header-label .bold {
-      display: block; }
     .tst-main .description {
       padding-bottom: 100px; }
     .tst-main .description-wrapper {
@@ -468,8 +472,19 @@ html, body {
       font-size: 45px; }
     .tst-main .logo__image {
       height: 30px; }
+    .tst-main .header {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+    .tst-main .logo {
+      margin-bottom: 15px; }
     .tst-main .header-label {
-      font-size: 14px; }
+      text-align: center;
+      font-size: 14px;
+      margin-bottom: 15px; }
+      .tst-main .header-label .bold {
+        display: inline; }
     .tst-main .description-wrapper {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -514,25 +529,12 @@ html, body {
       margin-bottom: 35px; } }
   @media screen and (max-width: 768px) {
     .tst-main .title {
-      font-size: 35px; }
-    .tst-main .header {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column; }
-    .tst-main .logo {
-      margin-bottom: 15px; }
-    .tst-main .header-label {
-      text-align: center; }
-      .tst-main .header-label .bold {
-        display: inline; } }
+      font-size: 35px; } }
   @media screen and (max-width: 568px) {
     .tst-main .title {
       font-size: 30px; }
     .tst-main .button__label {
       font-size: 14px; }
-    .tst-main .header {
-      margin-bottom: 0; }
     .tst-main .description-item__title,
     .tst-main .description-item__start {
       font-size: 16px;

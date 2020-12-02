@@ -7,11 +7,6 @@
     .header {
         padding: 30px;
     }
-    .header-label {
-        .bold {
-            display: block;
-        }
-    }
     .result-download__title {
         font-size: 22px;
     }
@@ -56,6 +51,20 @@
 
 @include maxWidth-992 {
     padding-bottom: 50px;
+    .header {
+        flex-direction: column;
+    }
+    .logo{
+        margin-bottom: 15px;
+    }
+    .header-label{
+        text-align: center;
+        font-size: 14px;
+        margin-bottom: 15px;
+        .bold {
+            display: inline;
+        }
+    }
     .title {
         font-size: 45px;
     }
@@ -63,9 +72,6 @@
         &__image {
             height: 30px;
         }
-    }
-    .header-label {
-        font-size: 14px;
     }
     .subtitle {
         font-size: 30px;
@@ -144,18 +150,6 @@
     .title {
         font-size: 35px;
     }
-    .header {
-        flex-direction: column;
-    }
-    .logo{
-        margin-bottom: 15px;
-    }
-    .header-label{
-        text-align: center;
-        .bold {
-            display: inline;
-        }
-    }
     .subtitle{
         font-size: 25px;
     }
@@ -195,9 +189,6 @@
         &__label {
             font-size: 14px;
         }
-    }
-    .header{
-        margin-bottom: 0;
     }
     .subtitle {
         font-size: 18px;

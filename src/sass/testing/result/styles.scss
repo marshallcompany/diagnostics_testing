@@ -106,7 +106,6 @@ html, body {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 55px;
     }
     .logo{
         flex-shrink: 0;
@@ -115,10 +114,23 @@ html, body {
         font-size: 16px;
         font-family: $interLight;
         font-weight: normal;
+        text-align: center;
+        .bold {
+            display: block;
+        }
+    }
+    .header__phone {
+        color: $purpleLight;
+        font-family: $interExtraBold;
+        text-decoration: none;
     }
     // RESULT
     .result{
         padding-bottom: 45px;
+    }
+    .clone {
+        position: fixed; 
+        left: 1000%;
     }
     .subtitle {
         text-align: center;
